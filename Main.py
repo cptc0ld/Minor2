@@ -8,7 +8,7 @@ def main():
     print("\nFetching Emails...\n")
     # gui.interfaceFetchEmails()
     username = "mrcool.cool9@gmail.com"
-    password = "dheerajPant@02"
+    password = "****"
     #ef.login(username, password)
     print("Extracting Features...\n")
     clss = fe.extractFeatures()

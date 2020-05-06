@@ -1,0 +1,125 @@
+Delivered-To: mrcool.cool9@gmail.com
+Received: by 2002:a2e:7d0f:0:0:0:0:0 with SMTP id y15csp560330ljc;
+        Fri, 28 Feb 2020 00:59:21 -0800 (PST)
+X-Received: by 2002:a92:dac3:: with SMTP id o3mr3438946ilq.237.1582880361345;
+        Fri, 28 Feb 2020 00:59:21 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1582880361; cv=none;
+        d=google.com; s=arc-20160816;
+        b=xRg0vYYOPgZQpGaJZskrrZVItJxxlgaAkq+O9eLJlUqlx+ANhsKfnDTFBVi7534cKs
+         P61HAmENnPGcRQJkJ4ENhdvMALkQiba80Rz5M27S8kuln6MHnp7T/6x8s+uhSBt8NbF+
+         aECT9Wc7zKyXnO1DS4r9Y55zU6SZ/Y8a1ywGQYg1lWFxyofasRdHLb9am57Qo/+ttQuO
+         WMwvqSykJdGk2RxtTbqqlBugXh/yZTbvkRXObuzF0FbXAmWeVLxMu9axoYQrYUMB0EaC
+         ACvGQR103iX55SK1EGzSaFmsnn9MKP0QOMkCoddBk76e7YB9ErOP83uEVt6ndYCn75Hp
+         D+zA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=AXztxVN66xUZrOyc/7y0cv+OH/LetMjEVtKhAVdfwY0=;
+        b=nEUnrFbHQH6zZFBtpePEeRYMq2+51HTfnlKwZxs9W8iQrUs47AoAvBTgQiJLajlBNK
+         D3kcNLa1G1VY3lShQUIMh1FZCOjIJ9Ygfns1IJ3UGS1YomAqSpe0oMh+saxxL+PBv59C
+         KRRVI8+Eee7iAsnRtqo/b+BBorA8vJtS/dtFYDOgJI5FamiuUv3EM3QtXmBxALCm0CIT
+         qQwYs74Xv9QwiHXfktZNm1gSmn+X0+2Uo5zmZbDgJe9BBDiF5D2K6tcpstpMJkm+Yfj0
+         Uhw6UfTyhgUa9cK4OQ8TldG0IOg4xk9O5z98OjlA6cQ16a/p4J8G8JqVtN4sztq+Kdua
+         VwVg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=lUZAYjVQ;
+       spf=pass (google.com: domain of dheerajpant35@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dheerajpant35@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <dheerajpant35@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id h7sor1606763jaj.13.2020.02.28.00.59.21
+        for <mrcool.cool9@gmail.com>
+        (Google Transport Security);
+        Fri, 28 Feb 2020 00:59:21 -0800 (PST)
+Received-SPF: pass (google.com: domain of dheerajpant35@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=lUZAYjVQ;
+       spf=pass (google.com: domain of dheerajpant35@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dheerajpant35@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=AXztxVN66xUZrOyc/7y0cv+OH/LetMjEVtKhAVdfwY0=;
+        b=lUZAYjVQCy5nMXKIc7z7NRBKZKr2FvXFnhU7UBHhGlfdoOj8a0K38BwHy4uqhnCEQF
+         i3rKT3KVuq5fIZi4gCegD/g3X8HEsvbDU8MbfYm083Fuz87894Hru+2uJdcFUYOw7ZOd
+         ncjaLCWz6kJxBgh2e6ESnnpPVh48R5sAxteqZWsswrcXDO1h0MtEoYS2lJjQKroyjM1r
+         92HHDdunD+b6FfkY7xKnXwMvMUAYjOlMWZagZE8YIFsVglGgHTWoFsgiYcdpr7esGiEt
+         HeyvODwIJAxJXMbKaWI8a8KME+S4HJ9EhD5JDPjypGPY1P3YmdxWgomuLnfFu4k5G2G7
+         ZoHQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=AXztxVN66xUZrOyc/7y0cv+OH/LetMjEVtKhAVdfwY0=;
+        b=o6eS9dcRLWYMtww8wO6nJz98xNpwNpbpmUHyQOAB9IlR+1hNtez01HZuHj3TuUgeoy
+         L4BcZEOTV/qOUXFVxJZSetLV4OJ0tOjoUaZZp2MKzQU5WX3h9olWTSXU2ccatnOjiLZG
+         Rh3CT6XFhFhkAe5JX5pJQ6BtKtTlOb/cvxqyoAdJIv5QZXvdm8arRUvxWVe7yv6PyPz2
+         ZSwohVOMUb6eO0/q5ZekfIPNalwzNBs8ZJeph/gsjVQHRxH19ZInZQwonMC4BG7ST5ka
+         JZTvnOiqixTB8UntwvzZMP3SCEudm2JM3MZBJKcUiwPYVJlpdNV/HW8V30k/1Xzmi5ac
+         2xeg==
+X-Gm-Message-State: APjAAAURogHFC9tX5I85Gong+bqrypKIuwAjpOKfRgI/El4x0C98Esfr
+	499dk9T+I28bhwULSmKVcZp0aXiNfUKhKBVu5FbE4ad4
+X-Google-Smtp-Source: APXvYqyUD39Bb5PlCviMQp5reUsVF5FQlPLU8BtvEu+U0zTT/pffxGk3N4plBeFfYiI/XV8EOoxc4lv7NRShgvrf5XI=
+X-Received: by 2002:a05:6638:f08:: with SMTP id h8mr2445202jas.11.1582880360534;
+ Fri, 28 Feb 2020 00:59:20 -0800 (PST)
+MIME-Version: 1.0
+References: <CANkEeToHAjtzFTwO1dv8wV=Xo0qG8_Hp9T6mDcKKab2AXj92Kg@mail.gmail.com>
+ <CAG2Qx6X0yjXwsc1hZnNThdnGbykU9mC1BDmaR15y0Xt5O4_eiA@mail.gmail.com>
+In-Reply-To: <CAG2Qx6X0yjXwsc1hZnNThdnGbykU9mC1BDmaR15y0Xt5O4_eiA@mail.gmail.com>
+From: Dheeraj Pant <dheerajpant35@gmail.com>
+Date: Fri, 28 Feb 2020 14:29:08 +0530
+Message-ID: <CANkEeTo04eJhdaWVoGOXayvAs7rfBrpEpqwqKHd7c7R-A5GDng@mail.gmail.com>
+Subject: Re:
+To: dheeraj pant <mrcool.cool9@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000009c97a1059f9f0d99"
+
+--0000000000009c97a1059f9f0d99
+Content-Type: text/plain; charset="UTF-8"
+
+Good and you?
+
+On Fri, Feb 28, 2020 at 2:28 PM dheeraj pant <mrcool.cool9@gmail.com> wrote:
+
+> i am fine
+> what about you?
+>
+>
+> On Fri, Feb 28, 2020 at 2:26 PM Dheeraj Pant <dheerajpant35@gmail.com>
+> wrote:
+>
+>> hi how are you?
+>>
+>>
+>> --
+>> Regards
+>> Dheeraj Pant
+>>
+>
+
+-- 
+Regards
+Dheeraj Pant
+
+--0000000000009c97a1059f9f0d99
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Good and you?=C2=A0<br></div><br><div class=3D"gmail_quote=
+"><div dir=3D"ltr" class=3D"gmail_attr">On Fri, Feb 28, 2020 at 2:28 PM dhe=
+eraj pant &lt;<a href=3D"mailto:mrcool.cool9@gmail.com">mrcool.cool9@gmail.=
+com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"marg=
+in:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1e=
+x"><div dir=3D"ltr">i am fine<div>what about you?</div><div><br></div></div=
+><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Fr=
+i, Feb 28, 2020 at 2:26 PM Dheeraj Pant &lt;<a href=3D"mailto:dheerajpant35=
+@gmail.com" target=3D"_blank">dheerajpant35@gmail.com</a>&gt; wrote:<br></d=
+iv><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;bord=
+er-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr">hi ho=
+w are you?<div><br><div><div><br></div>-- <br><div dir=3D"ltr"><div dir=3D"=
+ltr">Regards<div>Dheeraj Pant</div></div></div></div></div></div>
+</blockquote></div>
+</blockquote></div><br clear=3D"all"><div><br></div>-- <br><div dir=3D"ltr"=
+ class=3D"gmail_signature"><div dir=3D"ltr">Regards<div>Dheeraj Pant</div><=
+/div></div>
+
+--0000000000009c97a1059f9f0d99--

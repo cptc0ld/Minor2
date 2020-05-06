@@ -1,0 +1,110 @@
+Delivered-To: mrcool.cool9@gmail.com
+Received: by 2002:a2e:7d0f:0:0:0:0:0 with SMTP id y15csp711216ljc;
+        Fri, 28 Feb 2020 03:53:35 -0800 (PST)
+X-Received: by 2002:a9d:7e8c:: with SMTP id m12mr3114057otp.346.1582890815035;
+        Fri, 28 Feb 2020 03:53:35 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1582890815; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ExE2p7LTSXC7BMECpRgDpnxrUacs7UMHiDG0HGxjneKZ5Ir4KAv5iCz/ulgm+66R+9
+         ZuLOXvZIiRD1/DkD7J39N6+XtiyQel1lXe07ej45pNoUIOnqq+fEa1L0RGwqxSkcjPGc
+         tuoh1fCc8o88uvrAev2xC4a+MG5YjKkyWhZsCf6zicOp08tJc74TmLoo7pGt++C8BppM
+         4g5T41eV6AgCanS6rqvIYk+4nPgyLdjAOydpkpOQJ1dxFjXMyuT3tvnAktOpwx6tAQZ0
+         7GVmwrumONW9ZjKBtnxohju4pW2YNRYJYI77BrEIGSEqhlMq1hjCpIwUM94RM3gLk9d3
+         KwZg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=v+Iym4h93i5oF4xqo4BYCGRoI7DZ9h1+b/tdhRGr0lk=;
+        b=1BzTlQnmL3ECD5EONgksliqJNhMi/0wInDsm+Wc++R9rYwpz0pUFIk7XhveMJU0M8E
+         C4JJXsH+JaFbo7fQLuChQx1SK2QSxo/9KGZme/5UTF8GkiEWCzp0/2EQ1iNw0WCOL5yf
+         OynNxpZQmaQu2C/Tg2uSmjCqnvNRhpCZAMY3rs5lsTiQegm3U0yo2bG+rn45RW0yl4KX
+         nWHOkTW1igwb17XvrWsNiC4UPw4DjQtnDNFXOU6u5YCV2xTj4Uug2hZVaDdKvaa7lICu
+         +LqZtQk4WPw383yKt4J4g705CKyCoGSduQXMwrVfzIUwjWYEgn4ML3UTZAzAVlpW+IaE
+         1C1w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=mD+Fr9II;
+       spf=pass (google.com: domain of shubhgaur1999@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=shubhgaur1999@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <shubhgaur1999@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id e18sor1444132otf.104.2020.02.28.03.53.34
+        for <mrcool.cool9@gmail.com>
+        (Google Transport Security);
+        Fri, 28 Feb 2020 03:53:35 -0800 (PST)
+Received-SPF: pass (google.com: domain of shubhgaur1999@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=mD+Fr9II;
+       spf=pass (google.com: domain of shubhgaur1999@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=shubhgaur1999@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=v+Iym4h93i5oF4xqo4BYCGRoI7DZ9h1+b/tdhRGr0lk=;
+        b=mD+Fr9IIJWbvmi8vNNmP1ZrEf0AZIfUg9rgAfL+FnbNC1v0W86zQ9YyN2Syrf1P7Uu
+         3gVmzKfNwKEeaVF+HiX/H2N0paqY7p58no1TMaOL3EKOwm96HRSimqgO7UUiJwqyJsQQ
+         BTsiWmc2UJYoK+9ZTORd8xleHnH0W/BsDcza7A+Abv1MNlMGQqc8wu88j5vLm08FLHdl
+         WzEbfXYUy7p+gWTnY3hQIEb6DQKb511Yxqm2PXVRtQMD8r2m1g+HgSsE2bq2vzL59/0q
+         WTdNVcK/6iQzalukeE3D0UDmFUJRtTlJs1S1LwpKpWz9iasYgbhMAMzY1MowxceAjsHa
+         ce5A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=v+Iym4h93i5oF4xqo4BYCGRoI7DZ9h1+b/tdhRGr0lk=;
+        b=g6C+oxCzglBy1zIUPJ5yQkevhU7k023wQxoN9pguvV2Jg5Sx4ABQxlDvlZuocL7tGx
+         9LTt5DhG1G/QNsZ6JLWgWRPdtxAAStY5XstbLh1bVNOxCprljzn1s5VEu74AmEMw3sI+
+         9e2UhIZfNihFYZzJ3piiVs71Bri55R1CbBp7wsr6C30areLaRpNndKYFkNhYK7lhodo0
+         MFoa8HKJ3RYGohs4NEe5w0Ib9Iz1efdo0KdzknmBnPn2oGAvgaGFzcd/wu5U3tANAT+6
+         gwjlJsokdNHb4/kbvOvWj8O3bgq4WYmjiFX+SsiZoAsSYpr81kxOqlqqGhXrdJhwuCl8
+         ZVXw==
+X-Gm-Message-State: APjAAAX0XFKu2cE5oT4oa182z6LomQwVdMeXC1wd913SeFr35ZGMpQ2Z
+	Z384HJ8OczzfriqatKRnI5IXZmSLqoPN7l82zy3qUuZ/
+X-Google-Smtp-Source: APXvYqxjzoqmi8NBETGCcg+IqLl5mEr72X5Kz1HW4Nm3vWfUy37dUDjvMYid5CPExz+NjwcU4zxjGt8UzXGSSLXow3s=
+X-Received: by 2002:a05:6830:1185:: with SMTP id u5mr2739635otq.147.1582890814436;
+ Fri, 28 Feb 2020 03:53:34 -0800 (PST)
+MIME-Version: 1.0
+References: <CALTymuSxQkJFX9pVaiDseUs1t_o64az013JAO0kAvFs-RL=psw@mail.gmail.com>
+ <CAG2Qx6XPDzRxJxioYwhRmnpB+pLM8CiwDNCybOVQ7m1MJ4fjXQ@mail.gmail.com>
+In-Reply-To: <CAG2Qx6XPDzRxJxioYwhRmnpB+pLM8CiwDNCybOVQ7m1MJ4fjXQ@mail.gmail.com>
+From: Shubh Gaur <shubhgaur1999@gmail.com>
+Date: Fri, 28 Feb 2020 17:23:22 +0530
+Message-ID: <CALTymuTzbm32X_6qG1mkqYqBVV6J3J35LpfXNS6yt5-fm4D4gg@mail.gmail.com>
+Subject: Re:
+To: dheeraj pant <mrcool.cool9@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000b67c64059fa17c35"
+
+--000000000000b67c64059fa17c35
+Content-Type: text/plain; charset="UTF-8"
+
+I'm good, how about you?
+
+On Fri, Feb 28, 2020, 17:22 dheeraj pant <mrcool.cool9@gmail.com> wrote:
+
+> Fine and you
+>
+> On Fri, 28 Feb 2020, 17:22 Shubh Gaur, <shubhgaur1999@gmail.com> wrote:
+>
+>> How are you?
+>> (Kaise :o)
+>>
+>
+
+--000000000000b67c64059fa17c35
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">I&#39;m good, how about you?=C2=A0</div><br><div class=3D=
+"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Fri, Feb 28, 2020, 1=
+7:22 dheeraj pant &lt;<a href=3D"mailto:mrcool.cool9@gmail.com">mrcool.cool=
+9@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=
+=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=
+=3D"auto">Fine and you</div><br><div class=3D"gmail_quote"><div dir=3D"ltr"=
+ class=3D"gmail_attr">On Fri, 28 Feb 2020, 17:22 Shubh Gaur, &lt;<a href=3D=
+"mailto:shubhgaur1999@gmail.com" target=3D"_blank" rel=3D"noreferrer">shubh=
+gaur1999@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote=
+" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><=
+div dir=3D"auto">How are you?<div dir=3D"auto">(Kaise :o)</div></div>
+</blockquote></div>
+</blockquote></div>
+
+--000000000000b67c64059fa17c35--

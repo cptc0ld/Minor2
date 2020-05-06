@@ -1,0 +1,112 @@
+Delivered-To: mrcool.cool9@gmail.com
+Received: by 2002:a2e:7d0f:0:0:0:0:0 with SMTP id y15csp3948246ljc;
+        Sat, 22 Feb 2020 21:35:59 -0800 (PST)
+X-Google-Smtp-Source: APXvYqxYDRFfsINfvKjX7xmABIBVZ/8LeAYMLBO2uy7aHulfiHqbYBb7xqoyp8FiEEt4/g9jPl9K
+X-Received: by 2002:adf:fa43:: with SMTP id y3mr57751324wrr.65.1582436159425;
+        Sat, 22 Feb 2020 21:35:59 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1582436159; cv=none;
+        d=google.com; s=arc-20160816;
+        b=cDC4eYDKF1iYkC9xIQABlL7AjhyW8HDDHGcGT+GWo52IR82Z/o61BWpG4/M3/5Ft9z
+         yXDvJUPDHr6PMaj+bXPeZv96miboAYOH/eW7IWU0vnzIAaqI0ycD+17M1qwRbmpaYIRD
+         DVC0iSNE3unNlVegWGp6OUzn9mWsKSTvzHZvf0B5a/JI1QHFboEzwOqMlMB2U92pyU+u
+         Ww8j8GvXrotlZpJsfq7LzZMrfGHhbNfgzb8ou9gaJaBMfXlZohpI78z33QcLjMsRZkx3
+         XHfucP/vLvI4SOPtoL1nbUga8fLm4kI/sQRyCDXm7KHcnxLwTreUPpMPhop4T+NOdPQd
+         A/PA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:precedence:feedback-id:list-unsubscribe:message-id
+         :subject:reply-to:from:to:date:domainkey-signature:dkim-signature;
+        bh=IvdyKJ2Ox2JcptxpS9NI6iujrIShX10M9xgavIC4TCs=;
+        b=zkz99oB0PaeaQ8PvUE8T4nT41Hq6UWGJR/olJq2+WQ1TfvifR72F3eiqNoTMCXA8vE
+         Bcjg50tXazhI4AeVOgCxhvf5hZzXiiKksG9pc4CRzNlp8JnVio6NuuWwXgLwtEeKgcjP
+         D+zZ1d775Xudc+vCjF4GLLOugurFc1kk1przyr04KF5bh2w13IbTjNAdDmVjaCjh27KI
+         GTRWdtrConSAQiPm419G5koH6AnCa14WWOwdbP3k9wYslXUenBxpHmqtm4rbMWCuar0p
+         rRgvFqPfcvYFpg9l51kTQXy+3GHmvBpHI/vhEZ+v/0OzYK/M2a/GE+fyn37SsrEjF5ou
+         rLuw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@amitemails.in header.s=default header.b=IjYsD5oo;
+       spf=pass (google.com: domain of itii-yr826tpmdn784-mt1897bacodf2@amitemails.in designates 51.91.177.152 as permitted sender) smtp.mailfrom=itii-yr826tpmdn784-mt1897bacodf2@amitemails.in
+Return-Path: <itii-yr826tpmdn784-mt1897bacodf2@amitemails.in>
+Received: from fyrb.amitemails.in (fyrb.amitemails.in. [51.91.177.152])
+        by mx.google.com with ESMTPS id o5si7489939wrs.138.2020.02.22.21.35.59
+        for <mrcool.cool9@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 22 Feb 2020 21:35:59 -0800 (PST)
+Received-SPF: pass (google.com: domain of itii-yr826tpmdn784-mt1897bacodf2@amitemails.in designates 51.91.177.152 as permitted sender) client-ip=51.91.177.152;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@amitemails.in header.s=default header.b=IjYsD5oo;
+       spf=pass (google.com: domain of itii-yr826tpmdn784-mt1897bacodf2@amitemails.in designates 51.91.177.152 as permitted sender) smtp.mailfrom=itii-yr826tpmdn784-mt1897bacodf2@amitemails.in
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=default; d=amitemails.in;
+ h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:Feedback-ID:Content-Type:MIME-Version; i=newsletter@amitemails.in;
+ bh=Zkt7oRlPFwBhc//j567K7n6go8o=;
+ b=IjYsD5oolskz1i8bwjzFRyCcwe5hmdGsMFHViAyBf3lhx8ggAtWklZC0HrXmkfmob4kgvIN/hVh1
+   a9vGNqcUBzY1k+BUS5qxp7qss06PzErNG7QlfxHC6ielh6SxNZ0WDQ3srQmcWAysytfliLY2KAbI
+   YWDSmss4Pk3cT0O/e1o=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=default; d=amitemails.in;
+ b=OuIw+o95Bn0y8hqILFGW2E6hK6vrfirpUeVPor0iHM09a9bLwzwDpPAny7VyEyCFsNDLdxNYyul0
+   ozS+gooIOJUqNDUEfTehChHR96nYhqPtf3rBtliokq9NZ59fAN6jiQnCBEzN2Pd5ij/6iBAvyKWp
+   08PNeJm2IRXfoLpZqSA=;
+Date:Sun, 23 Feb 2020 11:05:56 +0530
+To:"mrcool.cool9@gmail.com" <mrcool.cool9@gmail.com>
+From:"Team Policybazaar" <newsletter@amitemails.in>
+Reply-To:"Team Policybazaar" <newsletter@amitemails.in>
+Subject:Get Rs 5 Lac Health Cover @ Rs 300/Month*
+Message-ID:<itii-yr826tpmdn784-mt1897bacodf2@amitemails.in>
+X-LjPE-Campaign-Uid:yr826tpmdn784
+X-LjPE-Subscriber-Uid:mt1897bacodf2
+X-LjPE-Customer-Uid:zh89024jc69cf
+List-Unsubscribe:<http://ebog.amitemails.in/lists/fy8013psy4638/unsubscribe/mt1897bacodf2/yr826tpmdn784/1>, <mailto:list-unsubscribe@amitemails.in?subject=Unsubscribe:yr826tpmdn784_mt1897bacodf2_1&body=Unsubscribe>
+Feedback-ID: mt1897bacodf2:yr826tpmdn784:zh89024jc69cf:LjPE
+Precedence:bulk
+X-LjPE-Mailer:amitemails_in_v129
+Content-Type: multipart/alternative; boundary="===============t2wr217azf38p9g75p6aaazo11x2g3ra=="
+MIME-Version: 1.0
+
+--===============t2wr217azf38p9g75p6aaazo11x2g3ra==
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+http://ebog.amitemails.in/campaigns/yr826tpmdn784/track-url/mt1897bacodf2/9=
+6aad09859b735cbbcf95dfc0f556d68fbe6aa31
+
+--===============t2wr217azf38p9g75p6aaazo11x2g3ra==
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><head><meta name=3D"charset" content=3D"utf-8"><title></titl=
+e></head><body>
+
+            <div align=3D"center">=0A      <a href=3D"http://ebog.amitemail=
+s.in/campaigns/yr826tpmdn784/track-url/mt1897bacodf2/96aad09859b735cbbcf95d=
+fc0f556d68fbe6aa31"><img alt=3D"" src=3D"http://pszi.amitemails.in/zh89024j=
+c69cf/yr826tpmdn784/sf300f8n178ae_0.png"></a>=0A    </div><br /><br />=0A=
+=C2=A0=0A<div style=3D"text-align:center;font-size:10px;color:#CCC;font-fam=
+ily:Verdana, Geneva, sans-serif;width:580px;margin:0 auto;padding:10px;">mr=
+cool.cool9 Your e-message generated on 2020-02-23 11:05:56 Your Unique Ref =
+No : [yr826tpmdn784-mt1897bacodf2]. This Email update notification is sent =
+to [mrcool.cool9@gmail.com] for Information purpose. This email and any fil=
+es transmitted with it are confidential and intended solely for the use of =
+the individual or entity to whom they are addressed. If you have received t=
+his email in error please notify the system manager. This message contains =
+confidential information and is intended only for the individual named. If =
+you are not the named addressee you should not disseminate, distribute or c=
+opy this e-mail. Please notify the sender immediately by e-mail if you have=
+ received this e-mail by mistake and delete this e-mail from your system. I=
+f you are not the intended recipient you are notified that disclosing, copy=
+ing, distributing or taking any action in reliance on the contents of this =
+information is strictly prohibited . The information contained in this mail=
+ is propriety and strictly confidential. if you do not want to recieve any =
+further notification from our system then you should click on the link belo=
+w. We will then immediately to register your request to stop any further em=
+ail/e-messages from our system.<br /><br /><br /><br /><a href=3D"http://eb=
+og.amitemails.in/lists/fy8013psy4638/unsubscribe/mt1897bacodf2/yr826tpmdn78=
+4/3" target=3D"_blank"><img alt=3D"" src=3D"http://pszi.amitemails.in/zh890=
+24jc69cf/yr826tpmdn784/nn827j26vpe55_0.png" style=3D"width:75px;height:25px=
+;" /></a></div>=0A<img width=3D"1" src=3D"http://ebog.amitemails.in/campaig=
+ns/yr826tpmdn784/track-opening/mt1897bacodf2" alt=3D""/></body></html>
+
+
+--===============t2wr217azf38p9g75p6aaazo11x2g3ra==--
+
+--===============t2wr217azf38p9g75p6aaazo11x2g3ra==-- 

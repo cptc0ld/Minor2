@@ -1,0 +1,140 @@
+Delivered-To: mrcool.cool9@gmail.com
+Received: by 2002:a2e:7d0f:0:0:0:0:0 with SMTP id y15csp1131130ljc;
+        Thu, 20 Feb 2020 12:28:15 -0800 (PST)
+X-Google-Smtp-Source: APXvYqwsblIML5AsY6SCwenudVRFiHl9tjpj8qdS+qB49JnhRcasoIvEqkSZ24PhAKHT/Qd+o2Xb
+X-Received: by 2002:ac8:5154:: with SMTP id h20mr29161032qtn.43.1582230495408;
+        Thu, 20 Feb 2020 12:28:15 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1582230495; cv=none;
+        d=google.com; s=arc-20160816;
+        b=TKqThWtLM1dafsyJdW/ss/0j13Ut/t1tdQtGh6sY9mEVOyQ370pmBg08YiisFmWDSq
+         FFcsE3FQ5iVJI+2WLijNpg/2yj+2WzUNnncRYSSqjXhPmkMxGfXX8SRysp3B9XTePQtN
+         le2mkI6SxTl70fKtJOKvtJ/bc93obWEkNzpm1AScOjtP+fg7yKtSrHtGn7iQi4zfNd9t
+         dxudNL36gHNpL0R9H1YW6rP1Vdib5jmBHHmTX0NMfa4K7eVkSTBbFJ1CoXl7pw4N1KYj
+         z7sWv7+K/OQW2lmLEPgjqjBkMUb+S3Uu+0WCOJW8iXcfMZkSvp/XgEygYXezoJ8RduUZ
+         syKw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:mime-version:feedback-id:subject:reply-to:from:to
+         :domainkey-signature:dkim-signature:dkim-signature;
+        bh=PC5fB7N/ShHHK8kfwz3oqHYV6IhqNNbLCZm1L9TgMPU=;
+        b=oldcjDm1IxNFs9YE+RXy/F8OSA60FQZ1kbGyOej0mWAFCtO5CNVanzmDSys41Jbcal
+         stg6SxWUuuKDHN8JVXNby29kvWTdOK9AQ4IfLmAgjvAkfMQVNqxOFmTQf4dmouxPDiB2
+         hGxkoTY0jSwLmv/xwFqEC7oiK7D/gEItwepCzQ78wmq/yRsDfKBvdJjxPwmh4w1WkRUS
+         bvECGwu8b+WHKxfstGhIK9UQiRIf99ofQ0N2NIv67M9YdnVGnuyEm1O3MkCGy9xdsPsC
+         gGLKsvrccnlOSAd5dnPdITdA6B/5x8ZI1tK7WiRkqD6//ONi3AxXUlbQM691RwOaKdEo
+         UFZQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@myntra.com header.s=ncfal header.b=5jInvWjH;
+       dkim=pass header.i=@ncapp05.com header.s=fnc header.b=dAGFvp0B;
+       spf=pass (google.com: domain of campaign-myntrabuyercom-22615-3340-58624142-mrcool.cool9=gmail.com@myntrabuyer.myntra.com designates 175.158.66.252 as permitted sender) smtp.mailfrom="campaign-myntrabuyercom-22615-3340-58624142-mrcool.cool9=gmail.com@myntrabuyer.myntra.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=myntra.com
+Return-Path: <campaign-myntrabuyercom-22615-3340-58624142-mrcool.cool9=gmail.com@myntrabuyer.myntra.com>
+Received: from transmail252.ncapp05.com (transmail252.ncapp05.com. [175.158.66.252])
+        by mx.google.com with ESMTPS id 69si359944qkd.150.2020.02.20.12.28.14
+        for <mrcool.cool9@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 20 Feb 2020 12:28:15 -0800 (PST)
+Received-SPF: pass (google.com: domain of campaign-myntrabuyercom-22615-3340-58624142-mrcool.cool9=gmail.com@myntrabuyer.myntra.com designates 175.158.66.252 as permitted sender) client-ip=175.158.66.252;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@myntra.com header.s=ncfal header.b=5jInvWjH;
+       dkim=pass header.i=@ncapp05.com header.s=fnc header.b=dAGFvp0B;
+       spf=pass (google.com: domain of campaign-myntrabuyercom-22615-3340-58624142-mrcool.cool9=gmail.com@myntrabuyer.myntra.com designates 175.158.66.252 as permitted sender) smtp.mailfrom="campaign-myntrabuyercom-22615-3340-58624142-mrcool.cool9=gmail.com@myntrabuyer.myntra.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=myntra.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=ncfal; d=myntra.com;
+ h=To:From:Reply-To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+ bh=88xDYT//LBCY5G4SsqL5PqyE3EE=;
+ b=5jInvWjHH/aQH6UeRKRT3i3fMLEbfVcXzkDmSUJT8IieeJuxHwEQy6FoACllHYTsT0R9Kz1i94cO
+   4SpBVAXj+ulYq8w0KXebEw5NIuMyDM3APm5Mc/2gAbCMlobbAMv5oos/DDboF7r2vGHHXQ9VoFNy
+   aSq2buzLwgxsq/uQJMY=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=fnc; d=ncapp05.com;
+ h=To:From:Reply-To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+ bh=88xDYT//LBCY5G4SsqL5PqyE3EE=;
+ b=dAGFvp0BQMmrql2fDc5M+9g1beDF1zuRJV9+w+fyLO7ADDG0QnQu8KUyrtFWK1pRgJBCFTGOxFGS
+   OSQRiiRXTDefrosmTo9vILtYIIHvcFoprUXpXl/YYJrHjuzHvUJiT0p1QZBxd77m/9JgJ+ZJgSAS
+   6Skj8QtiDbVkNIiSqEk=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=ncfal; d=myntra.com;
+ b=amwP9z1+CyqgFLIac46HTU2y/hJGiuxfJ3GmVpntE3nR6vice02PLq1C/juSAc+yLB93WpbyWf2l
+   QyySX/5ubcl7wHi5nJZVfcW0lY9dTDLmjTW3GrGAnmzfNngldGTttcgsYhmHJ6Mf5KtBO5aQwpVU
+   J9cXiWJf+h/P5gD+Etc=;
+To: mrcool.cool9@gmail.com
+From: Myntra <info@myntra.com>
+Reply-To: Myntra <info@myntra.com>
+Subject: Launching The Spring/Summer '20 Collection
+Feedback-ID: 3340:22615:20200220182548:nczc
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_5e57ccefe9ab8e3f3ed816e88181872b"
+Message-ID: <0.2.699.992.1D5E7F120AAB114.0@transmail252.ncapp05.com>
+Date: Fri, 21 Feb 2020 01:58:15 +0530
+
+
+
+
+--b1_5e57ccefe9ab8e3f3ed816e88181872b
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+The Trends To Look Out For! 
+
+ <http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUgJWSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&>
+
+ <http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUgJVSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&>
+
+ <http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUgJUSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&>
+
+ <http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUgJbSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&>
+
+ <http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUgJaSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&>
+
+ <http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUg1TSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&>
+
+To unsubscribe from these mailings, you may opt out here.
+<http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUgxVSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&>
+
+ If you would like to experience the best of online shopping for men,
+women and kids in India, you are at theright place. Myntra is the
+ultimate destination for fashion and lifestyle, being host to a wide
+array of merchandise including clothing,footwear,accessories,
+jewellery, personal care products and more. It is time to
+redefine your style statement with our treasure-trove of trendy items.
+Our online store brings you the latest in designer products straight
+out of fashion houses. You can shop online at Myntra from the comfort
+of your home and get your favourites delivered right to your
+doorsteps. 
+
+
+
+--b1_5e57ccefe9ab8e3f3ed816e88181872b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<body><html><head></head><body> <table width="100%" bgcolor="#f6f6f6" cellspacing="0" cellpadding="0" border="0" align="center"> <tr> <td valign="top" align="center"> <table width="100%" border="0" align="center" style="max-width:540px; background:#ffffff;"> <tr> <td bgcolor="#ffffff"> <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width:500px; background:#ffffff;"> <tr> <td align="center" style="border-bottom:5px solid #ffffff; font-family:Helvetica, Arial, sans-serif; color:#111111; font-size:14px;">The Trends To Look Out For!</td> </tr> <tr> <td
+align="center"> <a href="http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUgJWSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&"  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercom/templates/2628/0_b9f2200c-8cbf-42a9-919f-babace2ca8471582178019575-new.gif" width="100%" style="border:none; display:block; color:#e00000; font-size:15px;"> </a> </td> </tr> <tr> <td align="center"> <a
+href="http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUgJVSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&"  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercom/templates/2628/1_b5504d7f-5eec-4324-ac1e-c451ce8b1c9a1582178019527-modern.jpg" width="100%" style="border:none; display:block; color:#e00000; font-size:15px;"> </a> </td> </tr> <tr> <td align="center"> <a
+href="http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUgJUSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&"  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercom/templates/2628/2_7b372602-e037-4762-afc5-1cc04d80f50b1582178355013-crew.gif" width="100%" style="border:none; display:block; color:#e00000; font-size:15px;"> </a> </td> </tr> <tr> <td align="center"> <a
+href="http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUgJbSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&"  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercom/templates/2628/3_651211df-8498-4eca-ad18-a96b08a9436b1582178019630-shirts.jpg" width="100%" style="border:none; display:block; color:#e00000; font-size:15px;"> </a> </td> </tr> <tr> <td align="center"> <a
+href="http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUgJaSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&"  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercom/templates/2628/4_6f7c9c86-ae65-42ef-8359-40175738f7981582178019672-trousers.jpg" width="100%" style="border:none; display:block; color:#e00000; font-size:15px;"> </a> </td> </tr> <tr> <td align="center"> <a
+href="http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUg1TSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&"  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercom/templates/2628/5_e0baf90f-5c28-447b-94d0-a5c50fec33961582178019480-explore.jpg" width="100%" style="border:none; display:block; color:#e00000; font-size:15px;"> </a> </td> </tr> <tr> <td align="center"> <p style="text-align: center;"> <span style="font-size:8px;"> <a href="http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgYAUgxVSQ==&sl=Jkx6STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&pp=0&"  style="text-decoration:none; color: #fffff;">
+<span style="color:#A7A5A5;"><span style="padding:3px 13px 5px 13px; text-decoration:none;color: #fffff">To unsubscribe from these mailings, you may opt out here.</span></span> </a> </span> </p> </td> </tr> <p> <span style="color:#ffffff;"><span style="font-size:0px;">If you would like to experience the best of online shopping for men, women and kids in India, you are at theright place. Myntra is the ultimate destination for fashion and lifestyle, being host to a wide array of merchandise including clothing,footwear,accessories, jewellery, personal care products and more. It is time to
+redefine your style statement with our treasure-trove of trendy items. Our online store brings you the latest in designer products straight out of fashion houses. You can shop online at Myntra from the comfort of your home and get your favourites delivered right to your doorsteps. </span></span> </p><br/><div></div><img border="0" src="http://myntrabuyers.myntramailers.com/gtrack?clientid=22615&ul=
+UQgPB1IHVgZNUEkOR1dXDVhMVFkNXAh5UltZDw8fUwxfGlhLUA5aDk9UXF9bC3YDXVBaXEsGX19P&ml=VwMNBRoGHgRN&sl=Jkx2STNlHmd8NUkOTFpMEFUAQk8HQkIXWE9WEhFQXQJbClBLQE9WDQxLAw==&c=22615" ></body>
+</html>
+
+
+
+--b1_5e57ccefe9ab8e3f3ed816e88181872b--
+

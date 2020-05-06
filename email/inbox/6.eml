@@ -1,0 +1,82 @@
+Delivered-To: mrcool.cool9@gmail.com
+Received: by 2002:a2e:7d0f:0:0:0:0:0 with SMTP id y15csp710294ljc;
+        Fri, 28 Feb 2020 03:52:19 -0800 (PST)
+X-Received: by 2002:a9d:6a4f:: with SMTP id h15mr3014857otn.86.1582890739045;
+        Fri, 28 Feb 2020 03:52:19 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1582890739; cv=none;
+        d=google.com; s=arc-20160816;
+        b=iyj0LUI1WRtzXNdL+xReLYB0fV1OkE3LX4lQxM7RKwDgE9jHNjOuiw74JYOP1lC8Gf
+         IMgbMccZTQqyxAC69sajyivTMRAytClCEFObXMMiejIbiPiXSoIbn+pskp5CXT/gPaB8
+         JbgAAR+YvpziQ4y3l2puNKpr6IEAFdXUserNDmD8pqSlhg6l5Di3wwD49DmNRo9WYksB
+         JIbgAwMcb37GrvX8lKVMZdJ/UVFn4wFJ9JSTTJoetoGD/QWud6r+qklksZZV1QjfBnCm
+         OpxkIajH66RohGN2QGVcKLno9v80XXrSATuvzeUt94RWAfYTsThneaTAzq62fxylXJWA
+         bzPQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=/dmutv4WeSxnLuBFtIO3dsFI9uz7PS9i8VsZXOvXDus=;
+        b=z7M5qkb+rNQCvlE7oKoRD0blkhFvGQq+M0VGTM4JJad/v/ozTLiv9q/KwsVJZD5EAI
+         D4LCBbavWVVsq5EjcnUyWlXGNSa4G8PLWTcBuu8dUJwWdjvdEzpQrrI5NgqXXPiEZxyh
+         YRu8tlii+6NTNk1pfYaU/bqNKPjIfX11ibL+huzkPZd/4vgLxK3saMfXQbbjXGU0AoPi
+         GZdBm/x8LiXOsQ7MOXaEepp/wlNmmvQnSK5MjWLvJl4CFZ6f34ggQQYVCFM4Hu1dL2Br
+         DKJpS3iWhRApv6GrEAwSWk9/TM1Mr/Xg2gSu0NRczc4hRDchOl1GSRXHXFeZPDktfFf7
+         0TrA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=OJq3eHfL;
+       spf=pass (google.com: domain of shubhgaur1999@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=shubhgaur1999@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <shubhgaur1999@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id k21sor1450555otf.43.2020.02.28.03.52.18
+        for <mrcool.cool9@gmail.com>
+        (Google Transport Security);
+        Fri, 28 Feb 2020 03:52:19 -0800 (PST)
+Received-SPF: pass (google.com: domain of shubhgaur1999@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=OJq3eHfL;
+       spf=pass (google.com: domain of shubhgaur1999@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=shubhgaur1999@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=/dmutv4WeSxnLuBFtIO3dsFI9uz7PS9i8VsZXOvXDus=;
+        b=OJq3eHfL1N70+p/e25pEWjXCO/w51JxasFBDIfFYK8wNR3nFDWChOqm+WiZ5fUuw++
+         Tv8hRBaV8L+7TL8KOKwIBjrcMdKeuC9Soo2ZBNvPdo3tcSRQzORGmcd0297XpD5lY3yG
+         Cz5XEhoGrDGWpJN1Nsew62ani0Xf3cNg2f4lyC7nBsJxCQ8gb17jUDRkKiHiPUVR+BnR
+         dO2fGVS+UjCrfZNPSHsmVyktTRhWiLxMdfsWqiFpXtx6Rk6KJDAzWol0PaxneCcH+yVm
+         iPSKmk330LNUlBwDf+KwN5cvzGkffX1SHu7uZCNpQxKh2tXqZwtNLqK624kIgeDVn7II
+         gKXA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=/dmutv4WeSxnLuBFtIO3dsFI9uz7PS9i8VsZXOvXDus=;
+        b=N2N+cwaObwaob448Ru3hzrltRNn6C6Vche2A9nrKsJmdsveVb3j/42th4wo162T0OA
+         61uoXF8Tr5hpJP21r2RUWdBZzyooSkpcpuY7p2kaZTmrELI466VU/m62dRC8lihfXhxx
+         gPJ/Ylvu9+4UhD1ILLJVdzLnp+THpjEayLAI3jUL0heHQvAP8zH7tbD6N/5b7/A+vKuD
+         xOZRV3om8EzAcbLWvynkfYDaX0del5mGcMYdPhgjOEf3z54Z/d3fc808Dy0mcOJF53mv
+         3y8wyFgj271+z+SwKxWXCdnaUS4Shj0leS1/zAijlgo9cST6TA+tcs+C7GaUEIlSDWb9
+         pIfA==
+X-Gm-Message-State: APjAAAUDih4QM90PXy8xcivCfp2tMWQdFEWGg9ZL2VXi0z71LMp+2BJC
+	8XE3J9jOdCMryTXvLGOXrcmtadwtDgOJBcmL4VwBO4ZL
+X-Google-Smtp-Source: APXvYqw+YPyQDXMZEsN65ZP3igV73IrQCw38QkmxiqPBpDsSO6ghAWcEkAsYBLePH3KVUbNro7S7TGFRddI0Of3fuik=
+X-Received: by 2002:a05:6830:50:: with SMTP id d16mr3010262otp.166.1582890738327;
+ Fri, 28 Feb 2020 03:52:18 -0800 (PST)
+MIME-Version: 1.0
+From: Shubh Gaur <shubhgaur1999@gmail.com>
+Date: Fri, 28 Feb 2020 17:22:06 +0530
+Message-ID: <CALTymuSxQkJFX9pVaiDseUs1t_o64az013JAO0kAvFs-RL=psw@mail.gmail.com>
+Subject: 
+To: mrcool.cool9@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000002d22d9059fa1788c"
+
+--0000000000002d22d9059fa1788c
+Content-Type: text/plain; charset="UTF-8"
+
+How are you?
+(Kaise :o)
+
+--0000000000002d22d9059fa1788c
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="auto">How are you?<div dir="auto">(Kaise :o)</div></div>
+
+--0000000000002d22d9059fa1788c--

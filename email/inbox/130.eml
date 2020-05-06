@@ -1,0 +1,80 @@
+Delivered-To: mrcool.cool9@gmail.com
+Received: by 2002:a2e:7d0f:0:0:0:0:0 with SMTP id y15csp287307ljc;
+        Tue, 18 Feb 2020 23:25:41 -0800 (PST)
+X-Google-Smtp-Source: APXvYqwjophifshti0D8Ewz11wh/iTGqxfZGYBzpG25v6MybJThE/4LPE0aonA+fmUcTz6yT2RzV
+X-Received: by 2002:a25:d796:: with SMTP id o144mr22694525ybg.455.1582097141294;
+        Tue, 18 Feb 2020 23:25:41 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1582097141; cv=none;
+        d=google.com; s=arc-20160816;
+        b=tGoC5OzIV7f07/6o5AbtpLGeyYAzTGwdBq5hTcnxxq+BFe5PSPR2zJ3iEYiU1Pzv5B
+         aq7bCPwRJhU0fI1TI3rSLL6Ky4RpeYqqw+ccve+12A80Lk8EH7A5lbDALIfh90tSzqcE
+         9KK5w8kkitwjM5tJKrwgt2PPHs/G9Xa0+9kKe8YALKuhSirImHIO/VkQYrdIN8gGCJht
+         lBuNRjqrszlAviq2e1yfoQ3I43AR9hdJGUyfPBNJC1iRmxl9zEmPEKHLHGblfJGwIk6A
+         9SQDu5gRBCy+QS+0a5hy5CxIcY2IAi0VdTEa87wbdf3GUPY6fJPbWWvun3EHazxIIdZs
+         iEZw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:message-id:feedback-id
+         :errors-to:reply-to:from:subject:to:date:dkim-signature;
+        bh=x17vzVbDBEBT3iRumI3wmsql4RXynbzSk8cMlZb5Ukc=;
+        b=IPtb33ifSDWVsob2drzEI9YXR9NA4JbICb9hy+zeX4CscJoghNdV8ZEuMm6gQFV0Rw
+         7M/7t0oP+JlrVur1gkKzQnbEvNeZFGfVocAB9I24QS9A7aFeqffxVIWiohfoudmvu+YX
+         BMKY7OURReqziK/BlYK8/QWFXAiCc79tq4iywJSrssZQD0evzU7huw3gnti0dDkcZzKW
+         DzUBTUSUuX+Tm+ik21Z9lUgHozcvZAyLL+pYwVOGXogjrQgbDmwNVsd62zmjvbGvLXlu
+         X6dUbL+9Iu/w6KzIpRxcwQqTK4F48FUjvw90aRkAMMP0KTIOhmTnyt0X3iqondrMstrk
+         sWcg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@facebookmail.com header.s=s1024-2013-q3 header.b=XqmBcBOA;
+       spf=pass (google.com: domain of notification+kr4m22kwbkwa@facebookmail.com designates 66.220.155.155 as permitted sender) smtp.mailfrom=notification+kr4m22kwbkwa@facebookmail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=facebookmail.com
+Return-Path: <notification+kr4m22kwbkwa@facebookmail.com>
+Received: from 66-220-155-155.mail-mail.facebook.com (66-220-155-155.mail-mail.facebook.com. [66.220.155.155])
+        by mx.google.com with ESMTPS id a3si574643ybr.122.2020.02.18.23.25.41
+        for <mrcool.cool9@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 18 Feb 2020 23:25:41 -0800 (PST)
+Received-SPF: pass (google.com: domain of notification+kr4m22kwbkwa@facebookmail.com designates 66.220.155.155 as permitted sender) client-ip=66.220.155.155;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@facebookmail.com header.s=s1024-2013-q3 header.b=XqmBcBOA;
+       spf=pass (google.com: domain of notification+kr4m22kwbkwa@facebookmail.com designates 66.220.155.155 as permitted sender) smtp.mailfrom=notification+kr4m22kwbkwa@facebookmail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=facebookmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=facebookmail.com;
+	s=s1024-2013-q3; t=1582097140;
+	bh=QrWT85RJRxnV5PTrRjA7vC3UZPfpdoapg6rBSKp33uc=;
+	h=Date:To:Subject:From:MIME-Version:Content-Type;
+	b=XqmBcBOALjUkT+K/Yk3J+CgTo55bWuPIIkluf9U/zowwpZ7O3Ak5l0m/ZkBs4GRNL
+	 fxr33sz3wwS8TgooWMcOJY9EpCi2tjktmQCTFJH2UCHWmSUg2AUlWlKyQ+HWHnjFGA
+	 qYVphsj2i4NpYznosVK9oU7tnHOHdlOtsbVhs01I=
+Received: from facebook.com (1wC0iVHgvmNls9qzwZiP1LQruwz2BQIjbGwhWljLPl+prYfY4flOwsfQKaR8SZ6PdNCWKFe05CvB6hPTEgi51A== 2401:db00:2131:201a:face:0000:0021:0000)
+ by facebook.com with Thrift id 07fa25ba52e911eaa73a000af7c26d96-70971380;
+ Tue, 18 Feb 2020 23:25:40 -0800
+X-Facebook: from 2401:db00:2120:81e5:face:0:5a:0 ([MTI3LjAuMC4x]) 
+	by async with HTTPS (ZuckMail);
+Date: Tue, 18 Feb 2020 23:25:40 -0800
+To: mrcool.cool9@gmail.com
+Subject: A message from Facebook
+X-Priority: 3
+X-Mailer: ZuckMail [version 1.00]
+Return-Path: notification+kr4m22kwbkwa@facebookmail.com
+From: "Facebook" <notification+kr4m22kwbkwa@facebookmail.com>
+Reply-to: Facebook <notification+kr4m22kwbkwa@facebookmail.com>
+Errors-To: notification+kr4m22kwbkwa@facebookmail.com
+Feedback-ID: 9999::Facebook
+X-Facebook-Notify: ; mailid=
+X-FACEBOOK-PRIORITY: 0
+X-Auto-Response-Suppress: All
+Message-ID: <88efa57a1ad944e855fabc6fe344d8e8@2d4a6334d2f2bb73c1c106ccaf5b5e83c5a47abe274260dadc6a33286199d452>
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Hello,
+
+
+    Any violation of our terms of service could have broader implications =
+for your use of the Facebook Family of Apps and Services, including but =
+not limited to your user, admin, developer, and business-related =
+activities.
+
+
+The Facebook team
+

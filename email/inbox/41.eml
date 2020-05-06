@@ -1,0 +1,250 @@
+Delivered-To: mrcool.cool9@gmail.com
+Received: by 2002:a2e:7d0f:0:0:0:0:0 with SMTP id y15csp676864ljc;
+        Mon, 24 Feb 2020 10:29:13 -0800 (PST)
+X-Google-Smtp-Source: APXvYqxX5dBpF+yCWgqfle75AEVfKu9YJ29FtDgkOjYHpZpsfeBqhTA1cocHXe+nfjI00bz/TAQN
+X-Received: by 2002:a63:7558:: with SMTP id f24mr53349278pgn.259.1582568953486;
+        Mon, 24 Feb 2020 10:29:13 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1582568953; cv=none;
+        d=google.com; s=arc-20160816;
+        b=WMp2LPU4gJbjVORH0Cv0lroktkOUALhuSKseINapd56Su4QsKXypDnJsse5BmFcuiP
+         nffFEzgvFLLLjfHb4tknfYRw5Wr0SvkUpb7bp285wNnoWCcuNvKjhOrO/vZ+RlFF98Ih
+         sYVS0E5oENtNiqDAVy/1kNwq5seTqtFB+gFuRjkNV/2OYK5uWHtwvWUPC/7qjxiRhGkv
+         w/DVKph00H9Xj2HSog66rpsG2sc9zofy0R9/sN6ECfOLnGLNksz2Pwim3wx8qx92DXds
+         JxGANWVco+htI1hR1CWfFsvAMEGuPqf9rvwkbhoCG51ClFGpZIB2ZokrwUXZZSTju2xE
+         iCgQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:subject:mime-version:reply-to:from:to
+         :dkim-signature;
+        bh=QkzRgyyHA3ZVzGn6qxn/rBlGWQ1ax5jm7v/2gOUGzf8=;
+        b=NNXqUuNmdNs5zaa4X8hxrYY9fay8j+YBIBZMPi4BlVfsio1te3/oXhvjAD/3cokbCt
+         uwzNaaEH6YTQMHQz4u6g6RfADlxhlLipurx+aVP8gJfCBxwAwak9DYFpeVcHKjh2vyOE
+         uc+2GrV/UI8rHuoW2TP6g8DxtoaZGX2ym4O/mP1GKMdf61OOJWpZpyN4PODjbaJ5QePx
+         dMGyrrj4H159gSNvvX1+AC88hliG7vf+Tsu2fGUQhxFxpBFwAovbquIK2XNuf1/1+zGn
+         9zYDPd6l0GplrCr/jGXXsNyVPJovIaBiivHwNTPCruGyROR5ppo/jjoJ8Lmsh/Hp86BA
+         yAFQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@steampowered.com header.s=smtp header.b="w/+2dYjw";
+       spf=pass (google.com: domain of noreply@steampowered.com designates 208.64.202.61 as permitted sender) smtp.mailfrom=noreply@steampowered.com
+Return-Path: <noreply@steampowered.com>
+Received: from smtp-61.steampowered.com (smtp-61.steampowered.com. [208.64.202.61])
+        by mx.google.com with ESMTPS id a190si4046137pge.250.2020.02.24.10.29.13
+        for <mrcool.cool9@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+        Mon, 24 Feb 2020 10:29:13 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@steampowered.com designates 208.64.202.61 as permitted sender) client-ip=208.64.202.61;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@steampowered.com header.s=smtp header.b="w/+2dYjw";
+       spf=pass (google.com: domain of noreply@steampowered.com designates 208.64.202.61 as permitted sender) smtp.mailfrom=noreply@steampowered.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=steampowered.com; s=smtp; h=Date:Message-Id:Content-Type:Subject:
+	MIME-Version:Reply-To:From:To:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=QkzRgyyHA3ZVzGn6qxn/rBlGWQ1ax5jm7v/2gOUGzf8=; b=w/+2dYjwy6n+D6e9U5unJt9E9R
+	Wk3muw+kOfEtKI4pkFKAz1aruhDKhvTVI3TKPelB3RWZEacD0ACm289VjKNfumKowcP67nLhDmvRL
+	eCk5wtPZ4wCsnkBVNbB2X+OFXcgtXulYr2VMoXXKxYCRUpEf8LEO+8o9iuRi63ckqRNw=;
+Received: from [208.64.200.163] (helo=valvesoftware.com)
+	by smtp-02-tuk1.steampowered.com with smtp (Exim 4.90_1)
+	(envelope-from <noreply@steampowered.com>)
+	id 1j6IT1-000706-EF
+	for mrcool.cool9@gmail.com; Mon, 24 Feb 2020 10:28:31 -0800
+To: mrcool.cool9@gmail.com
+From: Steam Store <noreply@steampowered.com>
+Reply-To: <noreply@steampowered.com>
+X-Steam-Message-Type: Community Market Purchase Receipt
+MIME-Version: 1.0
+Subject: Thank you for your Community Market purchase
+Content-Type: multipart/alternative;
+ boundary="------------060908020109090601040503"
+Message-Id: <E1j6IT1-000706-EF@smtp-02-tuk1.steampowered.com>
+Date: Mon, 24 Feb 2020 10:28:31 -0800
+
+This is a multi-part message in MIME format.
+--------------060908020109090601040503
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Dear michelangeloroy,
+
+Your recent Community Market purchases have been processed and 30.74 INR has been debited from your Steam Wallet.
+
+This email message will serve as your receipt. You can also access your Purchase History online at any time.
+https://store.steampowered.com/account.
+
+2 Sawed-Off | Black Sand: 14.14 INR
+2 Glock-18 | Oxide Blaze: 12.62 INR
+
+
+                       --------
+Subtotal                    26.76 INR
+Counter-Strike: Global Offensive fee        2.66 INR
+Steam transaction fee        (fees charged by Valve Corp.)
+                       --------
+Total:                       30.74 INR
+
+Steam Wallet    30.74 INR
+Confirmation Number     2078911926995235959, 2073282427449938734, 2080037826901942710, 2075534227266270196
+Date Confirmed          Mon Feb 24 10:29:13 2020
+
+
+
+
+
+The Steam Support Team
+https://help.steampowered.com
+
+
+
+==============
+This notification has been sent to the email address associated with your Steam account.
+For information on Valve's privacy policy, visit https://store.steampowered.com/privacy_agreement/.
+This email message was auto-generated. Please do not respond.
+
+© Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+
+
+--------------060908020109090601040503
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+		<style media="all" type="text/css">
+		td, p, h1, h3, a {font-family: Helvetica, Arial, sans-serif;}
+		</style>
+	</head>
+
+<body LINK="#c6d4df" ALINK="#c6d4df" VLINK="#c6d4df" TEXT="#c6d4df" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #c6d4df;" >
+
+<table style="width: 538px; background-color: #393836;" align="center" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="height: 65px; background-color: #171a21; border-bottom: 1px solid #4d4b48; padding: 0px;">
+              <img src="https://store.steampowered.com/public/shared/images/email/email_header_logo.png" width="538" height="65" alt="Steam">
+        </td>
+	</tr>
+	<tr>
+		<td bgcolor="#17212e">
+
+			<table width="470" border="0" align="center" cellpadding="0" cellspacing="0" style="padding-left: 5px; padding-right: 5px; padding-bottom: 10px;">
+
+				<tr bgcolor="#17212e">
+					<td style="padding-top: 32px; padding-bottom: 16px;">
+					<span style="font-size: 24px; color: #66c0f4; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">
+						Dear michelangeloroy,
+					</span><br>
+					</td>
+				</tr>
+     			<tr>
+					<td style="padding-top: 12px; padding-bottom: 24px;">
+					<span style="font-size: 17px; color: #c6d4df; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">
+						<p>Your recent Community Market purchases have been processed and 30.74 INR has been debited from your Steam Wallet.</p>
+					</span>
+					<span style="padding-top: 12px; font-size: 14px; color: #c6d4df; font-family: Arial, Helvetica, sans-serif; font-weight: normal;">
+						<p>This email message will serve as your receipt. You can also access your <a style="color: #c6d4df" href="https://store.steampowered.com/account">Purchase History</a> online at any time.</p>
+					</span>
+					</td>
+				</tr>
+                <tr bgcolor="#121a25">
+					<td style="padding: 20px; font-size: 12px; line-height: 17px; color: #c6d4df; font-family: Arial, Helvetica, sans-serif;">
+						<table width="420" cellspacing="4" style="font-size: 11px; color: #c6d4df; font-family: Arial, Helvetica, sans-serif; align: left; lang="x-western">
+							<tr><td width="200"><div align="right"><b>2 Sawed-Off | Black Sand&nbsp;&nbsp;</b></div></td><td width="202">14.14 INR</td></tr><tr><td width="200"><div align="right"><b>2 Glock-18 | Oxide Blaze&nbsp;&nbsp;</b></div></td><td width="202">12.62 INR</td></tr>
+							
+							<tr>
+							  <td width="200"><div align="right"><b>&nbsp;</b></div></td>
+							  <td width="202"><hr width="180" color="#cccccc" align="left" size="1" noshade></td>
+							</tr>
+							<tr>
+							  <td width="200"><div align="right"><b>Subtotal&nbsp;&nbsp;</b></div></td>
+							  <td width="202">26.76 INR</td>
+							</tr>
+							<tr>
+							  <td width="200"><div align="right"><b>Counter-Strike: Global Offensive fee&nbsp;&nbsp;</b></div></td>
+							  <td width="202">2.66 INR</td>
+							<tr>
+							  <td width="200"><div align="right"><b>Steam transaction fee&nbsp;&nbsp;</b></div></td>
+							  <td width="202">1.32 INR (fees charged by Valve Corp.)</td>
+							</tr>
+							
+							<tr>
+							  <td width="200"><div align="right"><b>&nbsp;</b></div></td>
+							  <td width="202"><hr width="180" color="#cccccc" align="left" size="1" noshade></td>
+							</tr>
+							<tr>
+							  <td width="200"><div align="right" style="font-size: 17px"><b>Total:&nbsp;&nbsp;</b></div></td>
+							  <td width="202"><span style="font-size: 18px">30.74 INR</span></td>
+							</tr>
+							<tr>
+							  <td width="200">&nbsp;</td>
+							  <td width="202">&nbsp;</td>
+							</tr>
+							<tr>
+							  <td width="200"><div align="right"><b>Payment info&nbsp;&nbsp;</b></div></td>
+							  <td width="202">&nbsp;</td>
+							</tr>
+							<tr>
+							  <td width="200"><div align="right"><b>Steam Wallet&nbsp;&nbsp;</b></div></td>
+							  <td width="202">30.74 INR</td>
+							</tr>
+							<tr>
+							  <td width="200"><div align="right"><b>Confirmation Number&nbsp;&nbsp;</b></div></td>
+							  <td width="202">2078911926995235959, 2073282427449938734, 2080037826901942710, 2075534227266270196</td>
+							</tr>
+							<tr>
+							  <td width="200"><div align="right"><b>Date Confirmed&nbsp;&nbsp;</b></div></td>
+							  <td width="202">Mon Feb 24 10:29:13 2020</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+                	<td style="font-size: 12px; line-height: 17px; color: #6d7880; padding-top: 16px; padding-bottom: 12px;">
+						  
+						  
+					</td>
+				</tr>
+				<tr>
+					<td style="font-size: 12px; color: #6d7880; padding-top: 16px;">
+						
+					</td>
+				</tr>
+				<tr>
+                	<td style="font-size: 12px; color: #6d7880; padding-top: 16px; padding-bottom: 60px;">
+						The Steam Support Team<br>
+						<a style="color: #8f98a0;" href="https://help.steampowered.com/">https://help.steampowered.com/</a><br>
+                	</td>
+                </tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td bgcolor="#000000">
+
+				<table width="460" height="55" border="0" align="center" cellpadding="0" cellspacing="0">
+
+					<tr valign="center">
+						<td width="110">
+							<a href="http://www.valvesoftware.com/" target="_blank" style="color: #8B8B8B; font-size: 10px; font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif; text-transform: uppercase;><span style="font-size: 10px; color: #8B8B8B; font-family: Trebuchet MS,Verdana,Arial,Helvetica,sans-serif; text-transform: uppercase">
+							<img src="http://storefront.steampowered.com/v/img/gift/VALVe.gif" alt="VALVE" width="92" height="26" hspace="0" vspace="0" border="0" align="top"></a>
+						</td>
+						<td width="350" valign="center">
+							<span style="color: #999999; font-size: 9px; font-family: Verdana, Arial, Helvetica, sans-serif;">© Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</span>
+						</td>
+					</tr>
+
+				</table>
+		</td>
+	</tr>
+
+
+</table>
+
+</body>
+</html>
+
+
+--------------060908020109090601040503--
+
+

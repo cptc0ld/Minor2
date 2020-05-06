@@ -1,0 +1,644 @@
+Delivered-To: mrcool.cool9@gmail.com
+Received: by 2002:a2e:7d0f:0:0:0:0:0 with SMTP id y15csp962847ljc;
+        Thu, 20 Feb 2020 09:23:13 -0800 (PST)
+X-Received: by 2002:a37:4856:: with SMTP id v83mr29552997qka.350.1582219393699;
+        Thu, 20 Feb 2020 09:23:13 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1582219393; cv=none;
+        d=google.com; s=arc-20160816;
+        b=cMpGoNodjMNnXR9H7enu8QCu/iGaAFhRICEcGV7GP7al9Of+Lx5IgrbsIj3WRGkhxJ
+         JfGO25QMz+Z8SBuwBtWqGRGUaAaxdoNHd0gDwf5GWk5CKflFPBWi91Vaww7Q+m4EPIz3
+         qoWiE74ZHyv1/rluROlW8mN9Wx4dwczk8DQHykeBjtJDf93frG42Dex5aA9+IuFg33Em
+         mYlvS0r32g7I+RXWv+s0UuA1q21WklSjo8RmMOJtD9AAmyL5qMIDRVlRpTUeENoh2Ap6
+         w2keoyd2tWAFvrd7FYjVyZaVUa29mF1srS8KRRUcxNeFTRyhNQmbMj23KmqTrArRWMW7
+         jnyw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:feedback-id:reply-to:date:mime-version
+         :dkim-signature;
+        bh=7Y6E1NRqKiwNqSgXlNy9TAlfaQYY1NM7YgxT1mtDmJ4=;
+        b=lmo0olFZDNPdSs1yJ/07TcAl/deXRO1t3XrLd25ZPoJwH+r4U9c2AREr68SQYUiD0K
+         Ms5hdBzSgbefaTY3tXNtEws1bxIsow6Vg7uoaNYHpGry8HPEvkLQqwzRtbH3eXEkMFM2
+         2/30ryco5ICjiFx+i8ko4254mBkgLeKPQ/6S5MwQBoHW4e74Okm+eOStRWT+fk946wIi
+         4pwwsLXhE99+m4ycOs9M1d9qbzMYD8PfO3rWiawbwWvsf6F3iifSW6RHbwcKdNtAc4UT
+         /nP9QorIq8KnJtQOUySbI4r/rEqPqakWMNIWwn/cT29B8WqLeTOgolvFo9QeQHILInNn
+         ukQw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=TTEYTHqF;
+       spf=pass (google.com: domain of 3gcboxggtddyfg-jwhdqsuugmflk.yggydw.ugeejuggd.uggd1yesad.uge@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3gcBOXggTDDYfg-jWhdqSUUgmflk.YggYdW.UgeejUggd.Uggd1YeSad.Uge@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=accounts.google.com
+Return-Path: <3gcBOXggTDDYfg-jWhdqSUUgmflk.YggYdW.UgeejUggd.Uggd1YeSad.Uge@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id k23sor2504270qki.41.2020.02.20.09.23.13
+        for <mrcool.cool9@gmail.com>
+        (Google Transport Security);
+        Thu, 20 Feb 2020 09:23:13 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3gcboxggtddyfg-jwhdqsuugmflk.yggydw.ugeejuggd.uggd1yesad.uge@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=TTEYTHqF;
+       spf=pass (google.com: domain of 3gcboxggtddyfg-jwhdqsuugmflk.yggydw.ugeejuggd.uggd1yesad.uge@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3gcBOXggTDDYfg-jWhdqSUUgmflk.YggYdW.UgeejUggd.Uggd1YeSad.Uge@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=accounts.google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20161025;
+        h=mime-version:date:reply-to:feedback-id:message-id:subject:from:to;
+        bh=7Y6E1NRqKiwNqSgXlNy9TAlfaQYY1NM7YgxT1mtDmJ4=;
+        b=TTEYTHqFBL2MAyPbVB0YouQc9mStdNrt2behWlia6fvMoj0Bhofvs+sZILmRO/I47Y
+         lZdWmrSwK7ZgKxrlyTo7TsxZLhrhBswf1zLH4KdupOQZR5Vs0zy+lRn2n0e0f1fhVPFr
+         t0Dy5X/Wa/7kN//OtjUbfXOsE30Szd/zjrL8CXCu/xj5tMzrmYPZ6OqBPuceS9aS6a0q
+         XHfr2fC8cqhm5McLGpi+Fya2G0jCZBliXspDlqrIQusrxgB0wdnK5ReEutz5ieblxNkE
+         vIUyS2mWnP6mawLbzf/xnmyi06tYLX+GhDHYelO15oF/LYjYVL89vudyq0i5QB0nTZ3x
+         V0+A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:date:reply-to:feedback-id
+         :message-id:subject:from:to;
+        bh=7Y6E1NRqKiwNqSgXlNy9TAlfaQYY1NM7YgxT1mtDmJ4=;
+        b=kFde+jIF0/Q0pfmqgi88GhAuA0Q80YudclpHKo3RFHpOTej0yUjcOr/gsznxLrmbaB
+         iDb63g4b4iKtc+71eIYUVvBCxU1EQ/Et2+K4jtw7ahV45lQE7Vp27GoOKpfMQJnE7GKp
+         /H2mBrvWm3Ht3sKfecKeocn2vqYG3eAc6xFPmzthTjbLO5oFI3W7uMkfZDzgOLO9xUBX
+         BZB35EJnTCYJZY2O2N1sHjpwj/ClWiyVo4siB/0bXir42cn5Gg5zpDy0iqbKxz5IBIMu
+         4wEpZrjCrpDFIZ9SfsVdrTHVE8gJNYq1awMlVWYPXT4jhAqE0hLggWSZs+LpvJDyDxnY
+         wvlQ==
+X-Gm-Message-State: APjAAAWr42YMZsduRqR8f0ng1U0YqJt+12wcnjmcg3/VzmgJCfM0CpkX
+	BK8FtrxUEIoE5pY=
+X-Google-Smtp-Source: APXvYqxl3y2UxQ6Ilu2HrP5H1xfU22g8ENeyTUsMPnfWehltl6JaS12TyKqGTsq5upi0oFTFiFiMvL8=
+MIME-Version: 1.0
+X-Received: by 2002:a37:4891:: with SMTP id v139mr29600210qka.172.1582219393339;
+ Thu, 20 Feb 2020 09:23:13 -0800 (PST)
+Date: Thu, 20 Feb 2020 09:23:13 -0800
+Reply-To: Google <no-reply@accounts.google.com>
+X-Google-Id: 303610
+Feedback-ID: Len:P-232:C20079894:gamma
+X-Notifications: GAMMA:<d6c0f5ec7e4a9c259973e26ae2ac7c3e124e569b-20079894-110545612@google.com>
+Message-ID: <d6c0f5ec7e4a9c259973e26ae2ac7c3e124e569b-20079894-110545612@google.com>
+Subject: dheeraj, got a new device? Review sign-in from Microsoft Edge on Windows
+From: Google <no-reply@accounts.google.com>
+To: mrcool.cool9@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000e59439059f052805"
+
+--000000000000e59439059f052805
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+R29vZ2xlDQoNCg0KDQoNCkhpIGRoZWVyYWosDQpZb3UgaGF2ZSBqdXN0IHNpZ25lZCBpbiBvbiBh
+IG5ldyBjb21wdXRlciENCg0KTWFrZSB0aGUgbW9zdCBvdXQgb2YgV2luZG93cyAxMCB3aXRoIHRo
+ZSBDaHJvbWUgYnJvd3Nlci4gQ2hyb21lIGlzIGEgZmFzdCwgIA0Kc2ltcGxlIGFuZCBzZWN1cmUg
+YnJvd3NlciwgYnVpbHQgZm9yIHRoZSBtb2Rlcm4gd2ViLg0KDQoNCg0KDQoNCkRvd25sb2FkIENo
+cm9tZQ0KDQoNCg0KDQoNCg0KDQoNCg0KRGlkbid0IGp1c3Qgc2lnbiBpbiBmcm9tIGEgbmV3IFdp
+bmRvd3MgMTAgY29tcHV0ZXI/IFNvbWVvbmUgbWF5IGhhdmUgeW91ciAgDQpwYXNzd29yZC4gQ2xp
+Y2sgaGVyZSB0byByZXZpZXcgdGhlIGRldmljZXMgdGhhdCBhY2Nlc3MgeW91ciBHb29nbGUgYWNj
+b3VudC4NCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KWW91IHJlY2VpdmVkIHRoaXMgZW1haWwg
+dG8gbGV0IHlvdSBrbm93IGFib3V0IGltcG9ydGFudCBjaGFuZ2VzIHRvIHlvdXIgIA0KR29vZ2xl
+IEFjY291bnQgYW5kIHNlcnZpY2VzLg0KDQrCqSAyMDIwIEdvb2dsZSBMTEMsIDE2MDAgQW1waGl0
+aGVhdHJlIFBhcmt3YXksIE1vdW50YWluIFZpZXcsIENBIDk0MDQzLCBVU0ENCg0KDQoNCg0K
+--000000000000e59439059f052805
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+=20
+=20
+=20
+  =20
+    <!doctype html public "- / /w3c / /dtd xhtml 1.0 transitional / /en" "h=
+ttps: / /www.w3.org /tr /xhtml1 /dtd /xhtml1-transitional.dtd">
+  <html xmlns:v=3Durn:schemas-microsoft-com:vml>
+<head>
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3DContent-Type>
+  <meta name=3Dviewport content=3D"width=3Ddevice-width, maximum-scale=3D1,=
+ minimum-scale=3D1, user-scalable=3Dno">
+
+<style type=3Dtext/css>table,td {
+      font-style: normal !important;
+     font-family:Helvetica,Roboto,Arial,sans-serif;
+   font-style:normal !important;
+    }
+    .ios_url a {
+      color: #00802a !important;
+      text-decoration: none !important;
+      cursor: text !important;
+    }
+
+    .ios_url_sample_ad a {
+      color: #21b129 !important;
+      text-decoration: none !important;
+      cursor: text !important;
+    }
+
+    .ios_url_address, .ios_phone_number a {
+      color: #444444 !important;
+      text-decoration: none !important;
+      cursor: text !important;
+    }
+
+    .ios_footer_address, .ios_postcard_address {
+      color: #666666 !important;
+      text-decoration: none !important;
+      cursor: text !important;
+    }
+
+    .ExternalClass {
+      width: 100%;
+    }
+
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass f=
+ont, .ExternalClass td, .ExternalClass div {
+      line-height: 100%;
+    }
+
+    #outlook a {
+      padding: 0px;
+    }
+  a{
+    white-space:nowrap;
+  }
+
+    @media only screen and (min-device-width: 320px) {
+      *[class].gmailfix {
+        display: none !important;
+      }
+
+      .intro_copy, .list_copy_desc, .list_copy_desc_2, .list_copy_desc_4, .=
+signoff {
+        font-size: 16px !important;
+        line-height: 24px !important;
+      }
+
+      .list_copy_desc_3 {
+        font-size: 16px !important;
+        line-height: 24px !important;
+      }
+    }
+
+    @media only screen and (max-device-width: 480px) {
+      .intro_copy, .list_copy_desc, .list_copy_desc_2, .list_copy_desc_4, .=
+signoff {
+        font-size: 22px !important;
+        line-height: 30px !important;
+      }
+
+      .list_copy_desc_3 {
+        font-size: 22px !important;
+        line-height: 30px !important;
+      }
+    }
+</style>
+  </head>
+
+
+  <body bgcolor=3D#ffffff style=3D"direction: ltr; -ms-text-size-adjust:100=
+%; -webkit-text-size-adjust:100%; margin:0; padding:0; ">
+<!--[if mso]>
+
+  <style type=3D"text/css">
+    td {
+      font-family: Helvetica,Roboto,Arial,sans-serif;
+    }
+
+    .hide_mso {
+      display: none !important;
+    }
+
+  </style>
+  <![endif]--><!--[if mso]>
+
+  <center>
+    <table style=3D"border-collapse:collapse; table-width:fixed;width:560px=
+;" align=3D"center"
+           width=3D"560">
+      <tr width=3D"560">
+        <td>
+  <![endif]-->
+  <table style=3D"-premailer-cellpadding:0; -premailer-cellspacing:0; borde=
+r-collapse:collapse; border-spacing:0; color:#444; font-family:Helvetica, A=
+rial, sans-serif; font-weight:300; margin:0 auto; mso-table-lspace:0; mso-t=
+able-rspace:0" cellpadding=3D0 cellspacing=3D0>
+  <tbody>
+    <tr>
+      <td style=3D"border-spacing:0; margin:0; padding:0"><!--[if (mso)]>
+      <table id=3D"outlook" width=3D"475" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0"
+             style=3D"border-collapse:collapse; table-width:fixed;" align=
+=3D"center">
+        <tr>
+          <td class=3D"outlooktd" style=3D"width:475px !important;" width=
+=3D"475">
+      <![endif]-->
+      <table border=3D0 cellpadding=3D0 cellspacing=3D0 dir=3Dltr id=3Dmast=
+body style=3D"direction: ltr;  -premailer-cellpadding:0; -premailer-cellspa=
+cing:0; border-collapse:collapse; border-spacing:0; color:#444; font-family=
+:Helvetica,Roboto,Arial,sans-serif; font-weight:300; margin:0 auto; mso-tab=
+le-lspace:0; mso-table-rspace:0" width=3D100%>
+        <tbody>
+          <tr>
+            <td bgcolor=3D#ffffff style=3D"border-spacing:0; margin:0; padd=
+ing:0">=C2=A0</td>
+          </tr>
+          <tr>
+            <td align=3Dcenter bgcolor=3D#ffffff style=3D"border-spacing:0;=
+ margin:0; padding:0">
+            <table align=3Dcenter bgcolor=3D#ffffff border=3D0 cellpadding=
+=3D0 cellspacing=3D0 style=3D"-premailer-cellpadding:0; -premailer-cellspac=
+ing:0; border-collapse:collapse; border-spacing:0; color:#444; font-family:=
+Helvetica,Roboto,Arial,sans-serif; font-weight:300; margin:0 auto; mso-tabl=
+e-lspace:0; mso-table-rspace:0;" width=3D100%>
+              <tbody>
+                <tr>
+                  <td align=3Dcenter style=3D"border-spacing:0; margin:0; p=
+adding:0">
+                  <table cellpadding=3D0 cellspacing=3D0 class=3DmaxWidth i=
+d=3Dheader style=3D"-premailer-cellpadding:0; -premailer-cellspacing:0; -pr=
+emailer-width:100%; border-collapse:collapse; border-spacing:0; color:#444;=
+ font-family:Helvetica,Roboto,Arial,sans-serif; font-size:18px; font-weight=
+:100; line-height:22px; margin:0 auto; max-width:560px; mso-table-lspace:0;=
+ mso-table-rspace:0;max-witdh:560px !important;" width=3D100%>
+                    <tbody>
+                      <tr>
+                        <td bgcolor=3D#fafafa style=3D"background-color:#fa=
+fafa; border-spacing:0; margin:0; padding:12px 0">
+                        <table align=3Dleft cellpadding=3D0 cellspacing=3D0=
+ style=3D"-premailer-cellpadding:0; -premailer-cellspacing:0; -premailer-wi=
+dth:100%; border-collapse:collapse; border-spacing:0; color:#444; font-fami=
+ly:Helvetica,Roboto,Arial,sans-serif; font-weight:300; margin:0 auto; mso-t=
+able-lspace:0; mso-table-rspace:0" width=3D100%>
+                          <tbody>
+                            <tr>
+                              <td bgcolor=3D#fafafa class=3Dgutter style=3D=
+"-premailer-width:12px; background-color:#fafafa; border-spacing:0; margin:=
+0; padding:12px 0" width=3D12px>=C2=A0</td>
+                              <td bgcolor=3D#fafafa style=3D"background-col=
+or:#fafafa; border-spacing:0; margin:0; padding:12px 0">
+                              <table cellpadding=3D0 cellspacing=3D0 dir=3D=
+ltr id=3Dlogo style=3D"-premailer-cellpadding:0; -premailer-cellspacing:0; =
+-premailer-width:100%; border-collapse:collapse; border-spacing:0; color:#4=
+44; font-family:Helvetica,Roboto,Arial,sans-serif; font-weight:300; margin:=
+0 auto; mso-table-lspace:0; mso-table-rspace:0" width=3D100%>
+                                <tbody>
+                                  <tr>
+                                    <td bgcolor=3D#fafafa dir=3Dltr style=
+=3D"background-color:#fafafa; border-spacing:0; margin:0; padding:50px 0 0;=
+ padding-top:0" width=3D100%><img alt=3DGoogle src=3Dhttps://www.gstatic.co=
+m/gmktg/mtv-img/google_logo_color_trans.png style=3D"border:none; display:b=
+lock; max-width:95px; float:left" width=3D95></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              </td>
+                              <td bgcolor=3D#fafafa class=3Dgutter style=3D=
+"-premailer-width:12px; background-color:#fafafa; border-spacing:0; margin:=
+0; padding:12px 0" width=3D12px>=C2=A0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <table cellpadding=3D0 cellspacing=3D0 class=3DmaxWidth s=
+tyle=3D"-premailer-cellpadding:0; -premailer-cellspacing:0; -premailer-widt=
+h:100%; border-collapse:collapse; border-spacing:0; color:#444; font-family=
+:Helvetica,Roboto,Arial,sans-serif; font-weight:300; margin:0 auto; mso-tab=
+le-lspace:0; mso-table-rspace:0" width=3D100%>
+                    <tbody>
+                      <tr>
+                        <td bgcolor=3D#fafafa class=3Dcard-section style=3D=
+"background-color:#fafafa; border-spacing:0; margin:0; padding:0; padding-b=
+ottom:20px">
+                        <table cellpadding=3D0 cellspacing=3D0 style=3D"-pr=
+emailer-cellpadding:0; -premailer-cellspacing:0; -premailer-width:100%; bor=
+der-collapse:collapse; border-spacing:0; color:#444; font-family:Helvetica,=
+Roboto,Arial,sans-serif; font-weight:300; margin:0 auto; mso-table-lspace:0=
+; mso-table-rspace:0" width=3D100%>
+                          <tbody>
+                            <tr>
+                              <td class=3Dgutter style=3D"-premailer-width:=
+12px; border-spacing:0; margin:0; padding:0" width=3D12px>=C2=A0</td>
+                              <td bgcolor=3D#fff class=3Dwrapper style=3D"b=
+ackground-color:#fff; border-bottom:1px solid #f0f0f0; border-left:1px soli=
+d #f0f0f0; border-right:1px solid #f0f0f0; border-spacing:0; border-top:1px=
+ solid #eee; margin:0; padding:0">
+                              <table cellpadding=3D0 cellspacing=3D0 style=
+=3D"-premailer-cellpadding:0; -premailer-cellspacing:0; -premailer-width:10=
+0%; border-collapse:collapse; border-spacing:0; color:#444; font-family:Hel=
+vetica,Roboto,Arial,sans-serif; font-weight:300; margin:0 auto; mso-table-l=
+space:0; mso-table-rspace:0" width=3D100%>
+                                <tbody>
+                                  <tr>
+                                    <td class=3Dmain-content style=3D"borde=
+r-spacing:0; margin:0; padding:20px">
+                                    <table cellpadding=3D0 cellspacing=3D0 =
+style=3D"-premailer-cellpadding:0; -premailer-cellspacing:0; -premailer-wid=
+th:100%; border-collapse:collapse; border-spacing:0; color:#444; font-famil=
+y:Helvetica,Roboto,Arial,sans-serif; font-weight:300; margin:0 auto; mso-ta=
+ble-lspace:0; mso-table-rspace:0;max-width:474px;" width=3D100%>
+                                      <tbody><!--[if (mso)]>
+  <table id=3D"outlook" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0"
+             style=3D"border-collapse:collapse; table-width:fixed;" align=
+=3D"center">
+        <tr>
+          <td class=3D"outlooktd" style=3D"width:100% !important;" width=3D=
+"100%">
+      <![endif]-->
+                                        <tr>
+                                          <td align=3Dcenter class=3Dh1 sty=
+le=3D"border-spacing:0; font-family:Helvetica,Roboto,Arial,sans-serif; font=
+-size:24px; line-height:32px; margin:0; padding:15px 0; text-align:center">=
+<span style=3D"direction: ltr; color:#448bff; text-decoration:none">  Hi dh=
+eeraj,<br>You have just signed in on a new computer! </span></td>
+                                        </tr>
+                                        <tr>
+                                          <td align=3Dcenter class=3D"p sub=
+headline" style=3D"direction: ltr; border-spacing:0; color:#444; font-famil=
+y:Helvetica,Roboto,Arial,sans-serif;font-size:17px; line-height:24px; margi=
+n:0; padding:30px 30px 30px 30px; text-align:center">Make the most out of <=
+span dir=3Dltr style=3Dwhite-space:nowrap>Windows 10</span> with the <span =
+dir=3Dltr>Chrome</span> browser. <span dir=3Dltr>Chrome</span> is a fast, s=
+imple and secure browser, built for the modern web.</td>
+                                        </tr>
+                                        <!--[if mso]>
+</td></tr></table>
+</center>
+<![endif]-->
+                                        <tr>
+                                          <td>
+                                          <table style=3Dwidth:100%;>
+                                            <tbody>
+                                              <tr>
+                                                <td style=3D"border-spacing=
+:0; margin:0; padding:0" width=3D25%>=C2=A0</td>
+                                                <td style=3D"border-spacing=
+:0; margin:0; padding:0" valign=3Dmiddle width=3D10%><a data-meta-key=3Ddow=
+nload href=3Dhttps://www.google.com/appserve/mkt/p/AFnwnKWdDG-EvbXRKeO1MBs7=
+AWOmw_cGa0Llh8PB6e3_9od_99uNKbPiBdKsJV4888Er6MJ2cpse5bd1_-wfHZkeUmJ3MwEqqjm=
+TWGN0yKrlAuV7UJ88UP4ewk0cROUZYwCq-gG-1jeWsXbQd4M5eMGUTKbpVD4mMQIy-J7gNOajIV=
+OkNmY-yV0r2dJlW38_2XbsPLf-Y5t3Xigi0ppqHKceSzEvfxcg style=3D"color:#4184f3; =
+text-decoration:none"><img border=3D0 src=3Dhttps://www.gstatic.com/gmktg/m=
+tv-img/ndn_chrome_192x192.png style=3D"border:none; display:block; max-widt=
+h:50px" width=3D50></a></td>
+                                                <td style=3D"border-spacing=
+:0; margin:0; padding:0" width=3D5%>=C2=A0</td>
+                                                <td class=3Dempty style=3D"=
+border-spacing:0; font-size:0; line-height:0; margin:0; padding:0">
+                                                <table align=3Dcenter cellp=
+adding=3D0 cellspacing=3D0 style=3D"-premailer-cellpadding:0; -premailer-ce=
+llspacing:0; border-collapse:collapse; border-spacing:0; color:#444444; fon=
+t-family:Helvetica,Roboto,Arial,sans-serif; font-weight:300; margin:0 auto;=
+ mso-table-lspace:0; mso-table-rspace:0;">
+                                                  <tbody>
+                                                    <tr class=3Dhide_mso>
+                                                      <td style=3D"border-s=
+pacing:0; margin:0; padding:0" width=3D25%>=C2=A0</td>
+                                                      <td align=3Dcenter ba=
+ckground=3Dhttps://www.gstatic.com/gmktg/mtv-img/gmb_reminders_btn_shadow_3=
+64.png bgcolor=3D#ffffff class=3Dbtm_img style=3D"background-color: #4286f7=
+;background:url(https://www.gstatic.com/gmktg/mtv-img/gmb_reminders_btn_sha=
+dow_364.png); background-repeat:no-repeat; border-spacing:0; margin:0; padd=
+ing:0; " valign=3Dmiddle width=3D40%><a align=3Dcenter class=3Dcta_btn data=
+-meta-key=3Ddownload href=3Dhttps://www.google.com/appserve/mkt/p/AFnwnKWdD=
+G-EvbXRKeO1MBs7AWOmw_cGa0Llh8PB6e3_9od_99uNKbPiBdKsJV4888Er6MJ2cpse5bd1_-wf=
+HZkeUmJ3MwEqqjmTWGN0yKrlAuV7UJ88UP4ewk0cROUZYwCq-gG-1jeWsXbQd4M5eMGUTKbpVD4=
+mMQIy-J7gNOajIVOkNmY-yV0r2dJlW38_2XbsPLf-Y5t3Xigi0ppqHKceSzEvfxcg style=3D"=
+min-width:170px; direction: ltr;box-sizing:border-box;border-radius:2px; co=
+lor:#ffffff;  font-family:Helvetica,Roboto,Arial,sans-serif; font-size:16px=
+; font-weight:normal; line-height:20px; mso-hide:all; padding:10px 27px; te=
+xt-align:center; text-decoration:none; vertical-align:middle; white-space:n=
+owrap;display:inline-block;" valign=3Dmiddle>Download Chrome</a></td>
+                                                      <td style=3D"border-s=
+pacing:0; margin:0; padding:0" width=3D25%>=C2=A0</td>
+                                                    </tr>
+                                                    <!--[if gte mso 9]>
+                                                  <tr>
+                                                    <td style=3D"padding: 0=
+px; line-height: 0px; padding-top:10px;"
+                                                        bgcolor=3D"#ffffff"=
+ width=3D"220" height=3D"60"
+                                                        valign=3D"top" alig=
+n=3D"center">
+                                                      <v:rect
+                                                          xmlns:v=3D"urn:sc=
+hemas-microsoft-com:vml"
+                                                          fill=3D"true" str=
+oke=3D"false"
+                                                          style=3D"width:22=
+0px; height:50px;">
+                                                        <v:fill type=3D"til=
+e"
+                                                                src=3D"http=
+s://www.gstatic.com/gmktg/mtv-img/gmb_reminders_btn_shadow_364_mso.jpg"
+                                                                color=3D"#f=
+fffff"/>
+                                                        <v:textbox inset=3D=
+"0,0,0,0">
+                                                          <table align=3D"c=
+enter"
+                                                                 style=3D"-=
+premailer-cellpadding: 0; -premailer-cellspacing: 0; mso-table-lspace: 0pt;=
+ mso-table-rspace: 0pt; border-collapse: collapse; border-radius: 2px; padd=
+ing-top: 0px; padding-right: 0px;  padding-left: 0px; border-top-width: 0px=
+; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px=
+;"
+                                                                 cellpaddin=
+g=3D"0" cellspacing=3D"0"
+                                                                 width=3D"2=
+20" height=3D"50">
+                                                            <tr>
+                                                              <td bgcolor=
+=3D""  height=3D"50" style=3D"line-height: 0px; -webkit-text-size-adjust: 1=
+00%; color: #ffffff; font-family: Helvetica,Roboto,Arial,sans-serif; text-d=
+ecoration: none; font-weight: bold; font-size: 16px; text-align: center; "
+                                                                  align=3D"=
+center" valign=3D"center">
+                                                                <a href=3D"=
+https://www.google.com/appserve/mkt/p/AFnwnKWdDG-EvbXRKeO1MBs7AWOmw_cGa0Llh=
+8PB6e3_9od_99uNKbPiBdKsJV4888Er6MJ2cpse5bd1_-wfHZkeUmJ3MwEqqjmTWGN0yKrlAuV7=
+UJ88UP4ewk0cROUZYwCq-gG-1jeWsXbQd4M5eMGUTKbpVD4mMQIy-J7gNOajIVOkNmY-yV0r2dJ=
+lW38_2XbsPLf-Y5t3Xigi0ppqHKceSzEvfxcg"
+                                                                   style=3D=
+"direction: ltr; color: #ffffff; text-decoration: none; vertical-align: mid=
+dle;">
+                                                                  Download =
+Chrome
+                                                                </a>
+                                                              </td>
+                                                            </tr>
+                                                          </table>
+                                                        </v:textbox>
+                                                      </v:rect>
+                                                    </td>
+                                                  </tr>
+                                                  <![endif]-->
+                                                  </tbody>
+                                                </table>
+                                                </td>
+                                                <td style=3D"border-spacing=
+:0; margin:0; padding:0" width=3D25%>=C2=A0</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td style=3D"border-bottom:1px so=
+lid #f0f0f0; width:100%; height:20px;">=C2=A0</td>
+                                        </tr>
+                                        <tr>
+                                          <td style=3Dheight:30px;>=C2=A0</=
+td>
+                                        </tr>
+                                        <!--[if (mso)]>
+      <table id=3D"outlook" width=3D"475" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0"
+             style=3D"border-collapse:collapse; table-width:fixed;" align=
+=3D"center">
+        <tr>
+          <td class=3D"outlooktd" style=3D"width:475px !important;" width=
+=3D"475px">
+      <![endif]-->
+                                        <tr>
+                                          <td align=3Dcenter class=3D"p bad=
+ge" style=3D"direction: ltr; border-spacing:0; color:#444; font-family:Helv=
+etica,Roboto,Arial,sans-serif; font-size:17px; line-height:24px; margin:0; =
+text-align:center max-width:575px !important;">
+                                          <p style=3D"max-width:575px !impo=
+rtant; display:block;padding:0 30px;  ">Didn&#39;t just sign in from a new =
+<span dir=3Dltr style=3Dwhite-space:nowrap>Windows 10</span> computer? Some=
+one may have your password. <a data-meta-key=3Dreview-devices href=3Dhttps:=
+//www.google.com/appserve/mkt/p/AFnwnKWNvzf-jThjVhwmcv1lVQUcTzmPVPfw-ZwYEv-=
+dG2RzvgnJsMNcGN4Qo4zXWISRXiLoJ_T7XJLvz_gSiwpsotH62YxOVOgchUVmgLa4QYqA-EAO0d=
+016cQ91UvT0ppX-c7sWQzV1UgMkVBOboLqQnASzRNpHK4qaIF-GgfgCf1200jQUiZMfyuGOnk8q=
+WVoZg_dH15P4W2OIULVWkWXHuPca_JjJRLNEFBKNh3BrGgAB88XzS_j style=3D"text-decor=
+ation: none; color: #4285F4;">Click here</a> to review the devices that acc=
+ess your Google account.</p>
+                                          </td>
+                                        </tr>
+                                        <!--[if mso]>
+</td></tr></table>
+</center>
+<![endif]-->
+                                      </tbody>
+                                    </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td bgcolor=3D#bababa class=3D"shadow c=
+olor1" height=3D1 style=3D"-premailer-height:1; background-color:#bababa; b=
+order-spacing:0; font-size:1px; line-height:1px; margin:0; padding:0">=C2=
+=A0</td>
+                                  </tr>
+                                  <tr>
+                                    <td bgcolor=3D#c8c8c8 class=3D"shadow c=
+olor2" height=3D1 style=3D"-premailer-height:1; background-color:#c8c8c8; b=
+order-spacing:0; font-size:1px; line-height:1px; margin:0; padding:0">=C2=
+=A0</td>
+                                  </tr>
+                                  <tr>
+                                    <td bgcolor=3D#dfdfdf class=3D"shadow c=
+olor3" height=3D1 style=3D"-premailer-height:1; background-color:#dfdfdf; b=
+order-spacing:0; font-size:1px; line-height:1px; margin:0; padding:0">=C2=
+=A0</td>
+                                  </tr>
+                                  <tr>
+                                    <td bgcolor=3D#ededed class=3D"shadow c=
+olor4" height=3D1 style=3D"-premailer-height:1; background-color:#ededed; b=
+order-spacing:0; font-size:1px; line-height:1px; margin:0; padding:0">=C2=
+=A0</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              </td>
+                              <td class=3Dgutter style=3D"-premailer-width:=
+12px; border-spacing:0; margin:0; padding:0" width=3D12px>=C2=A0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                       =20
+<table align=3Dcenter cellpadding=3D0 cellspacing=3D0 class=3Ddevicewidthin=
+ner dir=3Dltr id=3Dfooter style=3D"-premailer-cellpadding:0; -premailer-cel=
+lspacing:0; -premailer-width:100%; border-collapse:collapse; border-spacing=
+:0; color:#444; font-family:Helvetica, Arial, sans-serif; font-weight:300; =
+margin:0 auto; max-width:560px; mso-table-lspace:0; mso-table-rspace:0; tex=
+t-align:center" width=3D100%>
+  <tbody>
+    <tr>
+      <td bgcolor=3D#fafafa class=3Dwrapper style=3D"direction: ltr; backgr=
+ound-color:#fafafa; border-bottom:none; border-left:none; border-right:none=
+; border-spacing:0; border-top:none; margin:0; padding:0; padding-left:20px=
+; padding-right:30px; padding-top:22px">
+      <table cellpadding=3D0 cellspacing=3D0 style=3D"-premailer-cellpaddin=
+g:0; -premailer-cellspacing:0; -premailer-width:100%; border-collapse:colla=
+pse; border-spacing:0; color:#444; font-family:Helvetica, Arial, sans-serif=
+; font-weight:300; margin:0 auto; mso-table-lspace:0; mso-table-rspace:0" w=
+idth=3D100%>
+        <tbody>
+          <tr>
+            <td style=3D"border-spacing:0; color:#666; font-family:&quot;Ro=
+boto&quot;, Arial, Helvetica, sans-serif; font-size:10px; line-height:18px;=
+ margin:0; padding:0; padding-bottom:10px; text-align:center; direction:ltr=
+">You received this email to let you know about important changes to your G=
+oogle Account and services.</td>
+          </tr>
+          <tr>
+            <td style=3D"text-align:center; border-spacing:0; color:#666; f=
+ont-family:&quot;Roboto&quot;, Arial, Helvetica, sans-serif; font-size:10px=
+; line-height:18px; margin:0; padding:0; padding-bottom:10px">
+              <span><a href=3D# style=3D"color:#666; text-decoration:none">=
+ <font class=3Dfont dir=3Dltr style=3D"color:#666; text-decoration:none; te=
+xt-align:center; direction:ltr"> <span dir=3Dltr>=C2=A9 2020 Google LLC, 16=
+00 Amphitheatre Parkway, Mountain View, CA 94043, USA</span></font></a></sp=
+an>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table align=3Dcenter cellpadding=3D0 cellspacing=3D0 class=3DmaxWidt=
+h id=3DgmailFix style=3D"-premailer-cellpadding:0; -premailer-cellspacing:0=
+; -premailer-width:100%; border-collapse:collapse; border-spacing:0; color:=
+#444; font-family:Helvetica,Roboto,Arial,sans-serif; font-weight:300; margi=
+n:0 auto; max-width:560px; mso-table-lspace:0; mso-table-rspace:0" width=3D=
+100%>
+        <tbody>
+          <tr>
+            <td style=3D"-webkit-text-size-adjust:100%; border-collapse:col=
+lapse; border-spacing:0; color:#fff; font-family:Helvetica,Roboto,Arial,san=
+s-serif; font-size:14px; line-height:18px; margin:0; padding:0; white-space=
+:nowrap;color:white;">=C2=A0</td>
+          </tr>
+        </tbody>
+      </table>
+      <!--[if (mso)]>
+      </td>
+      </tr>
+      </table>
+      <![endif]--></td>
+    </tr>
+  </tbody>
+</table>
+<!--[if mso]>
+</td></tr></table>
+</center>
+<![endif]-->
+<img height=3D1 width=3D3 src=3Dhttps://www.google.com/appserve/mkt/img/AFn=
+wnKXdTUMT7c3PeHPx9J2sX5B7QcV0GP7Wa9CIrdbepCD_Zws.gif></body>
+</html>
+
+--000000000000e59439059f052805--

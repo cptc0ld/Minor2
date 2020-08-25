@@ -6,3 +6,5 @@ reply/opensubtitles2018/OpenSubtitles.en-es.en1.txt
 reply/opensubtitles2018/OpenSubtitles.en-es.es1.txt
 reply/data/sg.en.es.json
 reply/__pycache__/hparams.cpython-37.pyc
+reply/log/9500_ACC0.1.pt
+reply/log/9500_ACC0.33.pt

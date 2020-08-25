@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from pytorch_pretrained_bert import BertForSequenceClassification
-from hparams import hp
+from reply.params import hp
 
 class Net(nn.Module):
     def __init__(self, n_classes):

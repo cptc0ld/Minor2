@@ -40,7 +40,7 @@ def login(username, password):
         imap.login(username, password)
     except imaplib.IMAP4.error:
         print("LOGIN FAILED... ")
-
+    
     status, mailboxes = imap.list()
     #print(status, mailboxes)
     saveEmails(imap)

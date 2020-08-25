@@ -1,6 +1,6 @@
-from hparams import hp
+from reply.params import hp
 import torch
-from model import Net
+from reply.model import Net
 from pytorch_pretrained_bert import BertTokenizer
 from collections import OrderedDict
 from colorama import Fore, Style
@@ -19,6 +19,7 @@ def prepare_inputs(context, tokenizer):
     tokens = torch.LongTensor(tokens)
     tokens = tokens.unsqueeze(0) # (1, T)
     tokens = tokens.to("cuda")
+    
     return tokens
 
 def suggest(context, tokenizer, model, idx2phr):
@@ -31,23 +32,14 @@ def suggest(context, tokenizer, model, idx2phr):
         y_hat_prob = [round(each, 2) for each in y_hat_prob]
         preds = [idx2phr.get(h, "None") for h in y_hat]
         preds = " | ".join(preds)
-        print(f"{Fore.RED}{preds}{Style.RESET_ALL}")
-        print(f"{Fore.GREEN}{y_hat_prob}{Style.RESET_ALL}")
+        print(f"{Fore.BLUE}{preds}{Style.RESET_ALL}")
+        print(f"{y_hat_prob}{Style.RESET_ALL}")
 
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--ckpt", type=str, required=True,
-                        help="checkpoint file path")
-    args = parser.parse_args()
-
-
+def pred_ans(msg):
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
 
     print("Wait... loading model")
-    ckpt = args.ckpt
-
+    ckpt = "C:\\Users\\dheer\\OneDrive\\Documents\\Vscode\\Minor2\\reply\\log\\9500_ACC0.33.pt"
     model = Net(hp.n_classes)
     model = model.cuda()
     ckpt = torch.load(ckpt)
@@ -60,27 +52,4 @@ if __name__ == "__main__":
 
     print("# loading dictionaries ..")
     idx2phr = pickle.load(open(hp.idx2phr, 'rb'))
-
-    context = ""
-    print("Let's start a conversation. If you want to start a new one, please press Enter.")
-    while True:
-        line = input("A:")
-        if line == "":
-            context = ""
-            print("NEW CONVERSATION---")
-            continue
-        else:
-            context += line + " | "
-
-        suggest(context, tokenizer, model, idx2phr)
-
-        line = input("B:")
-        if line == "":
-            context = ""
-            print("NEW CONVERSATION---")
-            continue
-        else:
-            context += line + " | "
-
-        suggest(context, tokenizer, model, idx2phr)
-
+    suggest(msg, tokenizer, model, idx2phr)

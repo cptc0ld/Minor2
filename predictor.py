@@ -42,7 +42,7 @@ def login(username, password):
     except imaplib.IMAP4.error:
         print("LOGIN FAILED... ")
 
-    status, mailboxes = imap.list()
+    # status, mailboxes = imap.list()
     #print(status, mailboxes)
     saveEmails(imap)
     imap.logout()
@@ -75,15 +75,16 @@ def extractFeatures():
         # features["reply"] = replied(email["Message-ID"],sentEmails)
         featureslist = fe.dictList(features)
         inboxEmailFeatures.append(featureslist)
-        print("Mail Text: ", email['emailText'])
-        return inboxEmailFeatures
+        # print("Mail Text: ", email['emailText'])
+        return inboxEmailFeatures, email['emailText']
 
 
 def predict(clss):
-    input_feature = extractFeatures()
+    input_feature, msg = extractFeatures()
     print(input_feature)
     if(clss.predict(input_feature)):
         print("Reply")
+        return 1, msg
     else:
         print("Dont Reply")
-    return 0
+    return 0, "no-reply"

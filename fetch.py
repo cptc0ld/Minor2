@@ -18,4 +18,4 @@ con.select('INBOX')
 
 result, data = con.fetch(b'10', '(RFC822)')
 raw = email.message_from_bytes(data[0][1])
-print(raw)
+# print(raw)

@@ -53,7 +53,7 @@ Reply Suggestion
 
 ## Model used (BERT)
 
-<img src='img/bert.png'>
+<img src='img/Bert.png'>
 
 ---
 

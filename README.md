@@ -1,2 +1,3 @@
 # Minor2
- SmartReplyImplementation
+Automated Response Suggestion For Email
+
